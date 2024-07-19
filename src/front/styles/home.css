@@ -5,6 +5,22 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+body{
+
+    font-family: "Euphoria Script", cursive;
+    color: #000000;
+}
+.icon{
+    
+    font-size: 5vh;
+    color: #000000;
+}  
+
+.title{
+
+    font-size:3rem;
+
+}
 
 .backimage{
     position: fixed;
@@ -19,3 +35,20 @@
    
 
 }
+
+.imagelogo{
+    margin:0px;
+    padding:0px;
+    max-width: 14rem;
+    height: 100%;
+    width: 100%;
+}
+
+/* styles.css */
+.link {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+  }
+  
+
+  
