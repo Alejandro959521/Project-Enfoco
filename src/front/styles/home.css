@@ -5,3 +5,17 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+.backimage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+
+}
