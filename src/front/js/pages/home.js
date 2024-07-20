@@ -9,28 +9,24 @@ export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className=" backimage " style={{backgroundImage: `url(${home1})`}}>
-			
-			<div className="row m-0 p-0">
-				<div className="col m-0 p-0">
+		<div className=" backimage full-height flex flex-col " style={{backgroundImage: `url(${home1})`}}>
+					
+				<div className="flex-1">
 
 				<Navbarhome/>
-				
-
+				  
 				</div>
-			</div>
-			<div className="row ">
-				<div className="col d-flex justify-content-center mt-4">
+						
+				<div className="flex-1">
 
 					<p className=" title">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
+				
 				</div>
-			</div>
-			<div className="row">
-				<div className="col ">
+					
+				<div className=" flex-1">
 				<HomeFooter/>
 
 				</div>
-			</div>
 			
 		</div>
 	);

@@ -7,30 +7,30 @@ import "../../styles/home.css";
 
 export const Navbarhome = () => {
 	return (
-		<nav className="navbar navbar-light bg-transparent p-0 m-0 d-flex justify-content-between">
-			<div className="container-fluid  p-0 m-0">
+		<nav className="">
+			<div className="">
 			
 				<Link to="/">
 				
 				<img className="imagelogo" src={logo} />
 				</Link>
-				<div className="me-5">
-					<Link to="/" className=" mx-3 link fs-1">
+				<div className="">
+					<Link to="/" className=" link ">
 						<span className=""> Galería </span> 
 					</Link>
-					<Link to="/" className=" mx-3 link fs-1" >
+					<Link to="/" className=" link " >
 						<span className=" "> Album </span>
 					</Link>
-					<Link to="/" className=" mx-3 link fs-1">
+					<Link to="/" className="  link ">
 						<span className=" "> Servicios </span>
 					</Link>
-					<Link to="/" className=" mx-3 link fs-1">
+					<Link to="/" className="  link ">
 						<span className=" "> Contacto </span>
 					</Link>
-					<Link to="/" className=" mx-3 link fs-1 ">
+					<Link to="/" className="  link ">
 						<span className=" "> Sobre Mí </span>
-					</Link> 
-					<Link to="/" className=" mx-3 link fs-1" > 
+					</Link>  
+					<Link to="/" className="  link " > 
 					<i class="fa-solid fa-cart-plus "></i>
 					</Link>   
 				       

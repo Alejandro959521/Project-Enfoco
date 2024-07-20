@@ -7,7 +7,7 @@ import "../../styles/home.css";
 export const HomeFooter = () => {
 	
 	return (
-		<footer className=" d-flex justify-content-around">
+		<footer className=" ">
 		
 			
 			<span><i className="icon fa-brands fa-x-twitter"></i></span>
