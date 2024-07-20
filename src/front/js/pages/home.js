@@ -11,7 +11,7 @@ export const Home = () => {
 	return (
 		<div className=" backimage full-height flex flex-col " style={{backgroundImage: `url(${home1})`}}>
 					
-				<div className="flex-1">
+				<div className="flex-1 ">
 
 				<Navbarhome/>
 				  
