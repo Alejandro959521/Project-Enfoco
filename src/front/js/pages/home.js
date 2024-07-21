@@ -11,22 +11,22 @@ export const Home = () => {
 	return (
 		<div className=" backimage full-height flex flex-col " style={{backgroundImage: `url(${home1})`}}>
 					
-				<div className="flex-1 ">
+				
 
 				<Navbarhome/>
 				  
-				</div>
+				
 						
-				<div className="flex-1">
+				<div className="flex-1 flex justify-center items-center">
 
 					<p className=" title">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
 				
 				</div>
 					
-				<div className=" flex-1">
+				
 				<HomeFooter/>
 
-				</div>
+				
 			
 		</div>
 	);

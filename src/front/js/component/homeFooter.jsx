@@ -1,4 +1,6 @@
 import React from "react";
+import { faTwitter, faInstagram, faFacebook, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "../../styles/home.css";
 
@@ -7,15 +9,15 @@ import "../../styles/home.css";
 export const HomeFooter = () => {
 	
 	return (
-		<footer className=" ">
+		<footer className=" flex-1 flex justify-center items-center"> 
 		
 			
-			<span><i className="icon fa-brands fa-x-twitter"></i></span>
-			<span><i className="icon fa-brands fa-twitter"></i></span>
-            <span><i className="icon fa-brands fa-instagram"></i></span>
-			<span><i className="icon fa-brands fa-facebook"></i></span>
-			<span><i className="icon fa-brands fa-linkedin-in"></i></span>
-			<span><i className="icon fa-brands fa-tiktok"></i></span>
+			<a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faTwitter} className="mx-4 icon" /></a>
+			<a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faInstagram} className="mx-4 icon" /></a>
+			<a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faFacebook} className="mx-4 icon" /></a>
+			<a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faLinkedin} className="mx-4 icon" /></a>
+			<a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faTiktok} className="mx-4 icon" /></a>
+			
 		
 	</footer>
 		
