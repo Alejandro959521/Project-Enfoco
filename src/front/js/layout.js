@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
-
+import {Galery} from "./pages/galery"
+import { AboutMe } from "./pages/aboutMe";
+import { Services } from "./pages/services";
+import { Contact } from "./pages/contact";
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
 
@@ -23,13 +24,16 @@ const Layout = () => {
                 <ScrollToTop>
                     {/* <Navbar /> */}
                     <Routes>
-                        <Route element={<Home />} path="/" />
-                       
+                        <Route element={<Home/>} path="/" />
+                        <Route element={<Galery/>} path="/Galeria"/>
+                        <Route element={<AboutMe/>} path="/SobreMí"/>
+                        <Route element={<Services/>} path="/Servicios"/>
+                        <Route element={<Contact/>} path="/Contacto"/>
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     {/* <Footer /> */}
                 </ScrollToTop>
-            </BrowserRouter>
+            </BrowserRouter> 
         </div>
     );
 };
