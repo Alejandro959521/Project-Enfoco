@@ -9,16 +9,18 @@ import "../../styles/home.css";
 export const Navbarhome = () => {
 	return (
 		
-			<div className=" flex-1 flex  justify-between ">
+			<div className=" flex-1 flex justify-between ">
 				<div className="  ml-4 ">
 				<Link to="/">
 				
-				<img className = " w-[200px] h-[200px] object-cover " src={logo} />
+				<img className = "w-44 h-44" src={logo} />
 				</Link>
 
 				</div>
-				<div className = " text-4xl  flex items-start mt-8 space-x-16 pr-16">
-					
+				<div className = " text-3xl  flex items-start mt-8 space-x-16 pr-16">
+					<Link to="/" className=" link ">
+						<span className=" "> Inicio </span> 
+					</Link>
 					<Link to="/Galeria" className="  link ">
 						<span className=" "> Galería </span> 
 					</Link>					

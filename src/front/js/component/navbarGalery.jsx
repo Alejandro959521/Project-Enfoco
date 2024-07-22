@@ -9,19 +9,22 @@ import "../../styles/home.css";
 export const NavbarGalery = () => {
 	return (
 		
-			<div className=" flex justify-between h-32" style={{ backgroundColor: `#7B7C81` }}>
-				<div className="  ml-4  mt-8">
-				<Link to="/">
+			<div className="flex justify-between h-20" style={{ backgroundColor: `#7B7C81` }}>
+				<div className="  ml-4 ">
+				<Link to="/"> 
 				
-				<img className = " w-[200px] h-[200px] object-cover" src={logo} />
+				<img className = " w-44 h-44 " src={logo} />
 				</Link>
 
 				</div>
-				<div className = " text-4xl  flex items-start mt-8 space-x-16 pr-16">
-					
+				<div className = " text-3xl  flex items-start mt-8 space-x-16 pr-16">
+					<Link to="/" className=" link ">
+						<span className=" "> Inicio </span> 
+					</Link>	
 					<Link to="/Galeria" className=" link ">
 						<span className=" "> Galería </span> 
-					</Link>					
+					</Link>	
+									
 					<Link to="/Servicios" className=" link ">
 						<span className=" "> Servicios </span>
 					</Link>

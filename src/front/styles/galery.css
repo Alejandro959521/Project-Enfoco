@@ -1,0 +1,11 @@
+.rounded-image{
+
+    border-radius: 7%; 
+}
+
+.galeryimag{
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
