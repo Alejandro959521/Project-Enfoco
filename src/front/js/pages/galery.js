@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { NavbarGalery } from "../component/navbarGalery.jsx";
 import image from "../../img/imagegalery.jpeg";
-
+import {CardGalery} from "../component/cardGalery.jsx";
 import "../../styles/galery.css";
 
 
@@ -26,8 +26,10 @@ export const Galery = () => {
    
 			</div>
 
-			<div>
-
+			<div  className="flex items-center justify-center container mx-auto" style={{ minWidth: "18rem" }}>
+				 
+			<CardGalery/>
+			
 				
 			</div>
 
