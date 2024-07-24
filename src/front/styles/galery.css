@@ -3,9 +3,19 @@
     border-radius: 7%; 
 }
 
+.rounded-card{
+    border-radius: 10%; 
+
+}
+
 .galeryimag{
    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.rounded-button{
+    
+    border-radius:20%;
 }

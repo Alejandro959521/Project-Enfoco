@@ -8,27 +8,28 @@ import "../../styles/galery.css";
 
 export const CardGalery = () => {
 	return (
-		
-			<div className="grid grid-grid-cols-3 gap-3">
 
-				<div className="flex flex-col">
-					<div className="rounded ">
-						<img src={image}/>
+		
+			
+			<div className= "gap-5 p-10"  >
+
+				<div className="flex flex-col rounded-card bg-white">
+					<div className=" overflow-hidden rounded-card">
+						<img src={image} />
 					</div>
 
-					<p className="text-xl">dsfjñdsajfdsjfñdsa</p>
-					<p className="text-xl">43434324324324</p>
-					<button className="text-center text-white rounded" style={{ backgroundColor: `#0D0909` }}>
-                            detallar 
+					<p className="text-3xl my-1 text-center">Paisaje solemne</p>
+					<p className="text-3xl my-1 text-center">2000$-4000$</p>
+					<div className="text-center">
+						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 " style={{ backgroundColor: `#0D0909` }}>
+							Detallar
+						</button>
 
-					</button>
+					</div>
+				
+			</div>
 
+		</div>
 
-
-				</div>
-
-
-			</div>	
-		
 	);
 };
