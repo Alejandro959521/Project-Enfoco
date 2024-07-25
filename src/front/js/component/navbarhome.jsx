@@ -10,7 +10,8 @@ export const Navbarhome = () => {
 	return (
 		
 			<div className=" flex-1 flex justify-between ">
-				<div className="  ml-4 ">
+				<div className="  ml-4  ">
+				
 				<Link to="/">
 				
 				<img className = "w-44 h-44" src={logo} />
@@ -30,7 +31,7 @@ export const Navbarhome = () => {
 					<Link to="/Contacto" className="   link ">
 						<span className=" "> Contacto </span>
 					</Link>
-					<Link to="/SobreMí" className=" link ">  
+					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
 					<Link to="/" className="text-2xl   link " > 

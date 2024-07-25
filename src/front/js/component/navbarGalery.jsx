@@ -31,7 +31,7 @@ export const NavbarGalery = () => {
 					<Link to="/Contacto" className=" link ">
 						<span className=" "> Contacto </span>
 					</Link>
-					<Link to="/SobreMí" className=" link ">  
+					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
 					<Link to="/" className="text-2xl link " > 
