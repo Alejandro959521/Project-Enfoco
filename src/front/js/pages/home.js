@@ -18,7 +18,7 @@ export const Home = () => {
 				<p className=" title">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
  
 			</div>
-
+  
 			<HomeFooter />
 
 		</div>

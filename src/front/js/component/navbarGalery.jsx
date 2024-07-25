@@ -13,7 +13,7 @@ export const NavbarGalery = () => {
 				<div className="  ml-4 ">
 				<Link to="/"> 
 				
-				<img className = " w-44 h-44 " src={logo} />
+				<img className = " w-32 h-32 " src={logo} />
 				</Link>
 
 				</div>
