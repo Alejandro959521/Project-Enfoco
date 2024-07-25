@@ -8,9 +8,9 @@ export const Contact = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className=" backimage full-height flex flex-col ">
+		<div className="  ">
 					
-				<p>contacto</p>
+				<p className="text-6xl text-center">contactame</p>
 			
 		</div>
 	);

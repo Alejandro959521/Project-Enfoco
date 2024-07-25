@@ -8,9 +8,9 @@ export const Services = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className=" backimage full-height flex flex-col ">
+		<div className=" ">
 					
-				<p>servicios</p>
+				<p className="text-6xl text-center">servicios</p>
 			
 		</div>
 	);

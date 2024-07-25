@@ -17,7 +17,7 @@ export const Galery = () => {
 
 			<NavbarGalery />
 
-			<div className=" px-24 py-14 " style={{ backgroundColor: `#0D0909` }}>
+			<div className=" px-24 py-14 " style={{ backgroundColor: `#000000` }}>
 
 				<div className="rounded-image h-screen galeryimag" style={{ backgroundImage: `url(${image})` }}>
 
