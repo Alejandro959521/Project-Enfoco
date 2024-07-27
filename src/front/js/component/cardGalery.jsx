@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export const CardGalery = () => {
+export const CardGalery = ({data}) => {
 	
 	const navigate = useNavigate()
 
@@ -15,13 +15,13 @@ export const CardGalery = () => {
 			
 			<div className= "gap-5 p-10"  >
 
-				<div className="flex flex-col rounded-card bg-white">
-					<div className=" overflow-hidden rounded-card">
-						<img src={image} />
-					</div>
+				<div className="flex flex-col rounded-card h-[500px] bg-white">
+					<div className=" overflow-hidden rounded-card ">
+						<img src={data.image} /> 
+					</div>   
 
-					<p className="text-3xl my-1 text-center">Paisaje solemne</p>
-					<p className="text-3xl my-1 text-center">2000$-4000$</p>
+					<p className="text-3xl my-1 text-center">{data.title}</p>
+					<p className="text-3xl my-1 text-center">$ {data.price}</p>
 					<div className="text-center">
 						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 " style={{ backgroundColor: `#0D0909` }}
 						onClick={() => {

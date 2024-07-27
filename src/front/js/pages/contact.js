@@ -8,7 +8,7 @@ export const Contact = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="  ">  
+		<div className="  ">     
 					
 				<p className="text-6xl text-center">contactame</p>
 			

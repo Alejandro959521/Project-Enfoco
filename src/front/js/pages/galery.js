@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { Context } from "../store/appContext";
 import { NavbarGalery } from "../component/navbarGalery.jsx";
 import image from "../../img/imagegalery.jpeg";
@@ -9,6 +9,8 @@ import "../../styles/galery.css";
 
 export const Galery = () => {
 	const { store, actions } = useContext(Context);
+
+	console.log("esto es data",store.data);
 
 
 
@@ -33,11 +35,18 @@ export const Galery = () => {
 			<div className="flex items-center justify-center  mx-auto" style={{ backgroundColor: `#7B7C81` }}>
 				<div className="  grid grid-cols-1 md:grid-cols-3 gap-5 " >
 
-					<CardGalery />
-					<CardGalery />
-					<CardGalery />
-					<CardGalery />
-					<CardGalery />
+					{
+
+						store.data.map((item,index) => (
+
+						<CardGalery  data={item} key= {index}/>
+
+						))
+
+					}
+					
+					
+					
 				</div>
 
 				
