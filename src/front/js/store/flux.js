@@ -9,7 +9,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 
 			getData: async () => {
-
 				try {
 
 					const url = "https://fakestoreapi.com"
@@ -26,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const body = await respond.json();
 					
 					setStore({ data: body })
-   
+					console.log("el array listo",getStore().data);
 				} catch (error) {
 					console.log(error);
 

@@ -1,12 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/LogoPrueba.png";
 import "../../styles/home.css";
+import { Context } from "../store/appContext.js";
 
 
 
 
 export const Navbarhome = () => {
+
+	const { store, actions } = useContext(Context);
+
+	const salvame=() =>{
+
+		actions.getData()
+		console.log("salvame activado")
+	}
+
+
 	return (
 		
 			<div className=" flex-1 flex justify-between ">
@@ -22,7 +33,7 @@ export const Navbarhome = () => {
 					<Link to="/" className=" link ">
 						<span className=" "> Inicio </span> 
 					</Link>
-					<Link to="/Galeria" className="  link ">
+					<Link to="/Galeria" className="  link " onClick={salvame}>
 						<span className=" "> Galería </span> 
 					</Link>					
 					<Link to="/Servicios" className=" link ">

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { Context } from "../store/appContext";
 import home1 from "../../img/Home1.jpeg";
 import "../../styles/home.css";
@@ -7,6 +7,8 @@ import { HomeFooter } from "../component/homeFooter.jsx";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
+	
+	
 
 	return (
 		<div className=" backimage full-height flex flex-col " style={{ backgroundImage: `url(${home1})` }}>
