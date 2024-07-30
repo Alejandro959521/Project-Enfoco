@@ -7,7 +7,7 @@ import "../../styles/home.css";
 
 
 export const HomeFooter = () => {
-	
+	 
 	return (
 		<footer className=" flex-1 flex justify-center items-center"> 
 		

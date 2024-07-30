@@ -11,11 +11,6 @@ export const Navbarhome = () => {
 
 	const { store, actions } = useContext(Context);
 
-	const salvame=() =>{
-
-		actions.getData()
-		console.log("salvame activado")
-	}
 
 
 	return (
@@ -30,10 +25,10 @@ export const Navbarhome = () => {
  
 				</div>
 				<div className = " text-3xl  flex items-start mt-8 space-x-16 pr-16">
-					<Link to="/" className=" link ">
+					<Link to="/" className=" link " >
 						<span className=" "> Inicio </span> 
 					</Link>
-					<Link to="/Galeria" className="  link " onClick={salvame}>
+					<Link to="/Galeria" className="  link " >
 						<span className=" "> Galería </span> 
 					</Link>					
 					<Link to="/Servicios" className=" link ">

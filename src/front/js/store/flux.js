@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {    
 
-			data:[]
+			data:[],
+			data2:undefined
 			
 		},
 		actions: {
@@ -21,11 +22,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 					const respond = await fetch(url + "/products", options);
 					
-
-					const body = await respond.json();
+					if (respond.ok){
+						
+						const body = await respond.json(); 
 					
-					setStore({ data: body })
-					console.log("el array listo",getStore().data);
+						setStore({ data: body })
+						console.log("el array desde flux",getStore().data);
+
+					}
+				
+
 				} catch (error) {
 					console.log(error);
 
@@ -33,8 +39,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-			}
+			},
 
+	
 		}  
 	};
 };

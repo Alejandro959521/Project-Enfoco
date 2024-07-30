@@ -11,45 +11,49 @@ export const Galery = () => {
 
 	const { store, actions } = useContext(Context);
 
-	
-	useEffect(() => {
-	    actions.getData()
-	}, [])
-
-	console.log("esto es data", store.data);
 	const items_per_page = 6
 
-	//const [datos, setDatos] = useState(totalData);
+	const [items, setItems] = useState([])
 
-	const [items, setItems] = useState()
+	const [currentPage, setCurrentPage] = useState(0);
 
-	// let getinfo = async () => {
+	let getinfo = async () => {
+		
+		await actions.getData() 
+		let valor = store.data 
+		setItems([...valor].splice(0, items_per_page))
+		
+   
+	}    
 
-	// 	let valor = actions.getdato()
-
-	// 	if (valor) {
-
-	// 		setItems([...valor].splice(0, items_per_page))
-	// 		return
-
-	// 	}
-
-	// 	await actions.getdato()
-	// 	valor = actions.getdato()
-	// 	setItems([...valor].splice(0, items_per_page))
-
-	// }  
-
-
+	useEffect(() => {
+	  getinfo()	
+	}, [])
+       
+	console.log("array en 6 ", items); 
 
 	const nextPage = () => {
 
-		console.log("next")
+		const totalItems = store.data.length;
+		const nextPage = currentPage + 1;
+		const firstIndex = nextPage * items_per_page;
+
+		if (firstIndex >= totalItems) return;
+		let valor = store.data 
+		setItems([...valor].splice(firstIndex, items_per_page))
+		setCurrentPage(nextPage);
+
 	}
-
+ 
 	const prevPage = () => {
-
-		console.log("prev")
+		
+		const nextPage = currentPage - 1;
+		
+		if (nextPage  < 0) return;
+		const firstIndex = nextPage * items_per_page;
+		let valor = store.data 
+		setItems([...valor].splice(firstIndex, items_per_page))
+		setCurrentPage(nextPage);
 	}
 
 	return (
@@ -75,7 +79,7 @@ export const Galery = () => {
 
 					{
 
-						store.data.map((item, index) => (
+						items.map((item, index) => (
 
 							<CardGalery data={item} key={index} />
 
@@ -83,16 +87,13 @@ export const Galery = () => {
 
 					}
 
-
-
 				</div>
-
 
 			</div>
 			<div className="flex justify-around text-3xl text-white py-3" style={{ backgroundColor: `#7B7C81` }}>
 				<button onClick={prevPage}
 				>Anterior</button>
-				<p>Pag 1...{Math.ceil((store.data.length) / 6)}</p>
+				<p>Pag {currentPage+1}...{Math.ceil((store.data.length) / 6)}</p>
 				<button onClick={nextPage}
 				>Siguente</button>
 			</div>
