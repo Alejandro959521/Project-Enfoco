@@ -30,9 +30,9 @@ const Layout = () => {
                         <Route element={<AboutMe/>} path="/SobreMi"/>
                         <Route element={<Services/>} path="/Servicios"/>
                         <Route element={<Contact/>} path="/Contacto"/>
-                        <Route element={<GaleryDetalle/>} path="/Detalle"/>
+                        <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
                         <Route element={<h1>Not found!</h1>} />
-                    </Routes>
+                    </Routes>   
                 
                 </ScrollToTop>
             </BrowserRouter> 

@@ -25,7 +25,7 @@ export const CardGalery = ({data}) => {
 					<div className="text-center">
 						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 " style={{ backgroundColor: `#0D0909` }}
 						onClick={() => {
-							navigate("/Detalle")
+							navigate(`/Detalle/${data.id}`)
 						}}
 						>
 							

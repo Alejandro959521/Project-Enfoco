@@ -9,8 +9,6 @@ import { Context } from "../store/appContext.js";
 
 export const Navbarhome = () => {
 
-	const { store, actions } = useContext(Context);
-
 
 
 	return (

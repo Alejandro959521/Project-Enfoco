@@ -2,8 +2,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {    
 
-			data:[],
-			data2:undefined
+			data:[]
+			
+
 			
 		},
 		actions: {
@@ -26,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						
 						const body = await respond.json(); 
 					
-						setStore({ data: body })
+						setStore({ data: body }) 
 						console.log("el array desde flux",getStore().data);
 
 					}
@@ -41,15 +42,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			},
 
-			getDetalles: async (id) => {
-				try {
+			getDetalles: async (id) => {  
+				try {   
 
 					const url = "https://fakestoreapi.com"
 					const options = {
 						method: "GET",
 						headers: {
 							"Content-type": "Application/json"
-						}
+						}    
 
 					}
 					const respond = await fetch( `${url}/products/${id}`, options);
@@ -57,15 +58,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (respond.ok){
 						
 						const body = await respond.json(); 
-					
-						setStore({ data: body })
-						console.log("el array desde flux",getStore().data);
+						console.log("entre en detalles",body)
+						return body
+						
 
 					}
 				
 
 				} catch (error) {
-					console.log(error);
+					console.log("error desde el flux detalles",error);
 
 				}
 

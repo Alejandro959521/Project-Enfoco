@@ -54,7 +54,7 @@ export const Galery = () => {
 		let valor = store.data 
 		setItems([...valor].splice(firstIndex, items_per_page))
 		setCurrentPage(nextPage);
-	}
+	}  
 
 	return (
 		<div className=" ">
@@ -93,7 +93,7 @@ export const Galery = () => {
 			<div className="flex justify-around text-3xl text-white py-3" style={{ backgroundColor: `#7B7C81` }}>
 				<button onClick={prevPage}
 				>Anterior</button>
-				<p>Pag {currentPage+1}...{Math.ceil((store.data.length) / 6)}</p>
+				<p>Pag {currentPage + 1}...{Math.ceil((store.data.length) / 6)}</p>
 				<button onClick={nextPage}
 				>Siguente</button>
 			</div>
