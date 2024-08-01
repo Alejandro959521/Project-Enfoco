@@ -41,6 +41,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			},
 
+			getDetalles: async (id) => {
+				try {
+
+					const url = "https://fakestoreapi.com"
+					const options = {
+						method: "GET",
+						headers: {
+							"Content-type": "Application/json"
+						}
+
+					}
+					const respond = await fetch( `${url}/products/${id}`, options);
+					
+					if (respond.ok){
+						
+						const body = await respond.json(); 
+					
+						setStore({ data: body })
+						console.log("el array desde flux",getStore().data);
+
+					}
+				
+
+				} catch (error) {
+					console.log(error);
+
+				}
+
+
+
+			}
+
 	
 		}  
 	};

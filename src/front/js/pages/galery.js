@@ -13,7 +13,7 @@ export const Galery = () => {
 
 	const items_per_page = 6
 
-	const [items, setItems] = useState([])
+	const [items, setItems] =  useState([])
 
 	const [currentPage, setCurrentPage] = useState(0);
 
