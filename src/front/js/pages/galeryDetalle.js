@@ -67,7 +67,7 @@ export const GaleryDetalle = () => {
 			</div>
 
 			<footer className="mx-auto text-white my-auto py-10"style={{ backgroundColor: `#0D0909` }}>
-				
+				  
  
 				<FooterGalery />  
 			
