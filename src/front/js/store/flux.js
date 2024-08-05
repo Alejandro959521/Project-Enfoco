@@ -2,7 +2,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {    
 
-			data:[]
+			data:[],
+			isCarOpen:false,
+			listadoCar:[]
 			
 
 			
@@ -72,7 +74,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-			}
+			},
+
+			openCart: () => { getStore().isCarOpen = true },
+			closeCart: () => { getStore().isCarOpen = false }
+
+			
+
 
 	
 		}  

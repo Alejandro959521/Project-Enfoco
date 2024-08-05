@@ -1,12 +1,17 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/LogoPrueba.png";
 import "../../styles/service.css";
+import { Context } from "../store/appContext.js";
 
 
 
 
 export const NavbarService = () => {
+
+	const { store, actions } = useContext(Context);
+
+
 	return (
 		
 			<div className="flex justify-between h-20" style={{ backgroundColor: `#0D0909` }}>
@@ -34,9 +39,11 @@ export const NavbarService = () => {
 					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
-					<Link to="/" className="text-2xl link " > 
-					<i className="fa-solid fa-cart-plus "></i>
-					</Link>   
+					
+					<i className="fa-solid fa-cart-plus text-2xl"
+					onClick={() => {actions.openCart()}}
+					></i>
+					   
 				       
 				</div>
 			</div>

@@ -5,7 +5,7 @@ import image from "../../img/imagegalery.jpeg";
 import { CardGalery } from "../component/cardGalery.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
 import "../../styles/galery.css";
-import {Carrito} from "../component/carrito.jsx";
+
 
 
 export const Galery = () => {
@@ -61,7 +61,7 @@ export const Galery = () => {
 		<div className=" ">
 
 			<NavbarGalery />
-			<Carrito/>
+			
 			<div className=" px-24 py-14 " style={{ backgroundColor: `#000000` }}>
 
 				<div className="rounded-image h-screen galeryimag" style={{ backgroundImage: `url(${image})` }}>

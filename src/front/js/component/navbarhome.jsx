@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import logo from "../../img/LogoPrueba.png";
 import "../../styles/home.css";
 import { Context } from "../store/appContext.js";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 
 export const Navbarhome = () => {
 
+	const { store, actions } = useContext(Context);
 
 
 	return (
@@ -38,9 +40,10 @@ export const Navbarhome = () => {
 					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
-					<Link to="/" className="text-2xl   link " > 
-					<i className="fa-solid fa-cart-plus "></i>
-					</Link>   
+					<FontAwesomeIcon icon={faTimes} className=" text-2xl cursor-pointer " 
+					onClick={() => {actions.openCart()}} />
+					
+			   
 				       
 				</div>
 			</div>

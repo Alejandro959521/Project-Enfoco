@@ -9,6 +9,7 @@ import { Contact } from "./pages/contact";
 import { Home } from "./pages/home";
 import { GaleryDetalle } from "./pages/galeryDetalle";
 import injectContext from "./store/appContext";
+import {Carrito} from "./component/carrito.jsx";
 
 
 //create your first component
@@ -23,7 +24,7 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-           
+                
                     <Routes>
                         <Route element={<Home/>} path="/" />
                         <Route element={<Galery/>} path="/Galeria"/>
@@ -33,7 +34,7 @@ const Layout = () => {
                         <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>   
-                
+                    <Carrito/>
                 </ScrollToTop>
             </BrowserRouter> 
         </div>

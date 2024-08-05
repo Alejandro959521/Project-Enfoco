@@ -13,6 +13,7 @@ export const GaleryDetalle = () => {
 	const params = useParams()
 	const { store, actions } = useContext(Context);
 	const [data, setData] = useState([])
+	
 
 	let getproduct = async () => {
 
@@ -33,15 +34,18 @@ export const GaleryDetalle = () => {
 		<div className=" ">
    
 			<NavbarGalery />
-
+			
 			<div className=" text-white p-8" style={{ backgroundColor: `#000000` }}>
 				<div className="  max-w-xl mx-auto  overflow-hidden">
 					<img className="" src={data.image} />
 					<div className="p-4 text-center">
 						<p className=" text-5xl font-bold py-2">{data.title}</p>
 						<p className=" text-3xl py-2">${data.price}</p>
-						<button className=" text-3xl p-2 rounded-lg" style={{ backgroundColor: `#0D0909` }}>
+						<button className=" text-3xl p-2 rounded-lg" style={{ backgroundColor: `#0D0909` }}
+						onClick={() => {actions.openCart()}}
+						>
 							Añadir al Carrito
+							
 						</button>
 					</div>
 				</div>
