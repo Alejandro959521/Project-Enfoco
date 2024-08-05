@@ -34,7 +34,7 @@ export const GaleryDetalle = () => {
 		<div className=" ">
    
 			<NavbarGalery />
-			
+			 
 			<div className=" text-white p-8" style={{ backgroundColor: `#000000` }}>
 				<div className="  max-w-xl mx-auto  overflow-hidden">
 					<img className="" src={data.image} />

@@ -10,11 +10,11 @@ export const Carrito = () => {
 
 
 
-
-	return (
+       
+	return (  
                
-        
-            <aside className={` ${store.isCarOpen ? 'flex': 'hidden'} product-detail flex-col right-0 fixed bg-white border border-black rounded-lg`}>
+             
+            <aside className={`${store.isCarOpen ? 'flex': 'hidden'} product-detail flex-col right-0 fixed bg-white border border-black rounded-lg`}>
 
             <div className="flex justify-between items-center">
                     <p className="text-4xl font-bold">Mi Carrito</p>

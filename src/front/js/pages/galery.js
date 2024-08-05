@@ -8,7 +8,7 @@ import "../../styles/galery.css";
 
 
 
-export const Galery = () => {
+export const Galery = () => { 
 
 	const { store, actions } = useContext(Context);
 

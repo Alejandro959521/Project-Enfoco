@@ -34,7 +34,7 @@ const Layout = () => {
                         <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>   
-                    <Carrito/>
+                    <Carrito/>   
                 </ScrollToTop>
             </BrowserRouter> 
         </div>

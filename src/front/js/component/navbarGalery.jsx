@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../img/LogoPrueba.png";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 export const NavbarGalery = () => {
@@ -38,9 +39,8 @@ export const NavbarGalery = () => {
 						<span className=" "> Sobre Mí </span>
 					</Link>  
 				
-					<i className="fa-solid fa-cart-plus text-2xl"
-					onClick={() => {actions.openCart()}}
-					></i>
+					<FontAwesomeIcon icon={faCartPlus} className=" text-2xl cursor-pointer " 
+					onClick={() => {actions.openCart()}} />
 				  
 				       
 				</div>

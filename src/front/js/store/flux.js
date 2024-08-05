@@ -11,7 +11,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-
+			openCart: () => { setStore({ isCarOpen: true })},
+			closeCart: () => { setStore({ isCarOpen: false })},
+				
 			getData: async () => {
 				try {
 
@@ -74,15 +76,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-			},
-
-			openCart: () => { getStore().isCarOpen = true },
-			closeCart: () => { getStore().isCarOpen = false }
+			}
 
 			
-
-
-	
 		}  
 	};
 };

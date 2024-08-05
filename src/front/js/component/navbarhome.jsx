@@ -4,7 +4,7 @@ import logo from "../../img/LogoPrueba.png";
 import "../../styles/home.css";
 import { Context } from "../store/appContext.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -40,7 +40,7 @@ export const Navbarhome = () => {
 					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
-					<FontAwesomeIcon icon={faTimes} className=" text-2xl cursor-pointer " 
+					<FontAwesomeIcon icon={faCartPlus} className=" text-2xl cursor-pointer " 
 					onClick={() => {actions.openCart()}} />
 					
 			   
