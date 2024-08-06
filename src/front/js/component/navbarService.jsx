@@ -41,9 +41,13 @@ export const NavbarService = () => {
 						<span className=" "> Sobre Mí </span>
 					</Link>  
 					
-					<FontAwesomeIcon icon={faCartPlus} className=" text-2xl cursor-pointer " 
-					onClick={() => {actions.openCart()}} />
-					   
+					<div className="relative inline-block">
+					<FontAwesomeIcon icon={faCartPlus} className=" text-2xl cursor-pointer "
+						onClick={() => { actions.openCart() }} />
+					<span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-sm font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+						{store.listCar.length}
+					</span>  
+				</div>
 				       
 				</div>
 			</div>

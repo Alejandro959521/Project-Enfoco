@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			data:[],
 			isCarOpen:false,
-			listadoCar:[]
-			
+			listCar:[],
+			sum:0
 
 			
 		},
@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						const body = await respond.json(); 
 					
 						setStore({ data: body }) 
-						console.log("el array desde flux",getStore().data);
+						//console.log("el array desde flux",getStore().data);
 
 					}
 				
@@ -62,7 +62,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (respond.ok){
 						
 						const body = await respond.json(); 
-						console.log("entre en detalles",body)
+						//console.log("entre en detalles",body)
 						return body
 						
 
@@ -73,10 +73,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log("error desde el flux detalles",error);
 
 				}
+			},
 
+			addCart: (data) => {
+						
+				setStore({listCar:[...getStore().listCar,data]})
 
+			},
 
+			deleted: (data) => {
+
+				setStore({listCar: getStore().listCar.filter((item) => item.id != data.id)})
+
+			},
+
+			sumCar: () => { 
+
+				const total = getStore().listCar.reduce((acc, item) => acc + item.price, 0);
+				setStore({ sum: Number(total.toFixed(2))});
+
+    
 			}
+
+		
+			
 
 			
 		}  

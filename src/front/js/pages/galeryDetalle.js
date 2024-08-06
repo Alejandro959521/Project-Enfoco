@@ -1,4 +1,4 @@
-import React, { useContext,useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { NavbarGalery } from "../component/navbarGalery.jsx";
 import imageDetalle from "../../img/detalles.jpeg";
@@ -9,11 +9,11 @@ import { useParams } from "react-router-dom";
 
 
 export const GaleryDetalle = () => {
-	
+
 	const params = useParams()
 	const { store, actions } = useContext(Context);
 	const [data, setData] = useState([])
-	
+
 
 	let getproduct = async () => {
 
@@ -23,18 +23,27 @@ export const GaleryDetalle = () => {
 
 	}
 
-	useEffect(() => {
-        getproduct()
-		
-    }, [])
+	const addToCart = (data) => {
 
-// console.log("esto es parasm id",params.Id )
-// console.log("esto data galery",data )
+		actions.openCart()
+		actions.addCart(data)
+		actions.sumCar()
+		console.log("esto es listcar",store.listCar);
+
+	} 
+  
+	useEffect(() => {   
+		getproduct()
+
+	}, [])
+
+	// console.log("esto es parasm id",params.Id )
+	// console.log("esto data galery",data )
 	return (
 		<div className=" ">
-   
-			<NavbarGalery />
-			 
+
+			<NavbarGalery />   
+
 			<div className=" text-white p-8" style={{ backgroundColor: `#000000` }}>
 				<div className="  max-w-xl mx-auto  overflow-hidden">
 					<img className="" src={data.image} />
@@ -42,10 +51,10 @@ export const GaleryDetalle = () => {
 						<p className=" text-5xl font-bold py-2">{data.title}</p>
 						<p className=" text-3xl py-2">${data.price}</p>
 						<button className=" text-3xl p-2 rounded-lg" style={{ backgroundColor: `#0D0909` }}
-						onClick={() => {actions.openCart()}}
+							onClick={() => {  addToCart(data) }}
 						>
 							Añadir al Carrito
-							
+
 						</button>
 					</div>
 				</div>
@@ -53,13 +62,13 @@ export const GaleryDetalle = () => {
 					<p className="text-4xl">Otros cliente compraron</p>
 					<div className="flex justify-center space-x-4 mt-4">
 						<div className="max-w-xs">
-							<img className="w-full rounded-lg"  src={imageDetalle}/>
+							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
 						<div className="max-w-xs">
-							<img className="w-full rounded-lg"  src={imageDetalle}/>
+							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
 						<div className="max-w-xs">
-							<img className="w-full rounded-lg"  src={imageDetalle}/>
+							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
 
 
@@ -70,13 +79,13 @@ export const GaleryDetalle = () => {
 
 			</div>
 
-			<footer className="mx-auto text-white my-auto py-10"style={{ backgroundColor: `#0D0909` }}>
-				  
- 
-				<FooterGalery />  
-			
+			<footer className="mx-auto text-white my-auto py-10" style={{ backgroundColor: `#0D0909` }}>
 
-		</footer>
+
+				<FooterGalery />
+
+
+			</footer>
 
 		</div>
 	);
