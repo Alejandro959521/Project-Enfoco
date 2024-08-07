@@ -40,17 +40,17 @@ export const Contact = () => {
 
 			<div className="flex flex-wrap justify-around gap-x-12 pt-4" style={{ backgroundColor: `#000000` }}>
 				
-				<form action="#" method="POST" class="flex-1 space-y-6 m-2 pl-8">
+				<form action="#" method="POST" className="flex-1 space-y-6 m-2 pl-8">
 					<div>
-						<label className="  block text-white mb-2  text-3xl" for="email">Email</label>
+						<label className="  text-white mb-2  text-3xl" for="email">Email</label>
 						<input className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="email" type="email" placeholder="Enter a valid email address" />
 					</div>
 					<div>
-						<label className="block text-white mb-2 text-3xl" for="name">Name</label>
+						<label className=" text-white mb-2 text-3xl" for="name">Name</label>
 						<input className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="name" type="text" placeholder="Enter your Name" />
 					</div>
 					<div>
-						<label className="block text-white mb-2 text-3xl" for="message">Message</label>
+						<label className="text-white mb-2 text-3xl" for="message">Message</label>
 						<textarea className=" text-2xl custom-input w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="message" rows="4" placeholder="Enter your message"></textarea>
 					</div>
 					<button className=" w-full p-3 text-2xl rounded text-white font-bold hover:bg-stone-600 transition duration-300" type="submit">ENVIAR</button>
