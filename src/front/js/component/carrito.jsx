@@ -68,7 +68,7 @@ export const Carrito = () => {
                                         <div className="border-t-2 px-4 py-2 flex justify-between text-3xl font-semibold mt-auto">
                                         <p >Total  :</p>
                                         <p>{store.sum} $</p>
-                                </div>     
+                                </div>      
                                   
                                 <button className="bg-black m-4 p-3 text-2xl text-white rounded-lg" >Finalizar Compra </button>        
                               

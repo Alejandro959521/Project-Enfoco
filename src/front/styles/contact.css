@@ -1,0 +1,8 @@
+.custom-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+    padding: 0.5rem 0;
+}
