@@ -17,7 +17,7 @@ export const CardGalery = ({data}) => {
 
 				<div className="flex flex-col rounded-card h-[500px] bg-white">
 					<div className=" overflow-hidden rounded-card ">
-						<img src={data.image} /> 
+						<img className="" src={data.image} /> 
 					</div>   
 
 					<p className="text-3xl my-1 text-center">{data.title}</p>
