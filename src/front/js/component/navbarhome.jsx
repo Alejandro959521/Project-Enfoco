@@ -15,16 +15,16 @@ export const Navbarhome = () => {
 
 	return (
 		
-			<div className=" flex-1 flex justify-between ">
-				<div className="  ml-4  ">
+			<div className="flex items-center p-4 h-auto md:h-20 flex-col md:flex-row justify-between">
+				<div className=" mb-4 md:mb-0 ml-4 ">
 				
 				<Link className= " " to="/">
 				
-				<img className = "w-32 h-32" src={logo} />
+				<img className = " w-24 h-24 md:w-32 md:h-32" src={logo} />
 				</Link>
  
 				</div>
-				<div className = " text-3xl  flex items-start mt-8 space-x-16 pr-16">
+				<div className = " flex flex-col md:flex-row text-dark text-xl md:text-3xl flex items-center mt-4 md:mt-0 md:space-x-16 md:space-y-0 space-x-0 space-y-4 md:pr-16 pr-0">
 					<Link to="/" className=" link " >
 						<span className=" "> Inicio </span> 
 					</Link>
@@ -40,7 +40,7 @@ export const Navbarhome = () => {
 					<Link to="/SobreMi" className=" link ">  
 						<span className=" "> Sobre Mí </span>
 					</Link>  
-					<div className="relative inline-block">
+					<div className="relative inline-block mt-4 md:mt-0">
 					<FontAwesomeIcon icon={faCartPlus} className=" text-2xl cursor-pointer "
 						onClick={() => { actions.openCart() }} />
 					<span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-sm font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
