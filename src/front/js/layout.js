@@ -10,7 +10,7 @@ import { Home } from "./pages/home";
 import { GaleryDetalle } from "./pages/galeryDetalle";
 import injectContext from "./store/appContext";
 import {Carrito} from "./component/carrito.jsx";
-
+import {CheckOut} from "./pages/checkOut";
 
 //create your first component
 const Layout = () => {
@@ -32,6 +32,7 @@ const Layout = () => {
                         <Route element={<Services/>} path="/Servicios"/>
                         <Route element={<Contact/>} path="/Contacto"/>
                         <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
+                        <Route element={<CheckOut/>} path="/CheckOut"/>
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>   
                     <Carrito/>   

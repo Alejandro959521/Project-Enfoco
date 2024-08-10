@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import image from "../../img/galeryprueba.jpeg";
 import "../../styles/galery.css";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +17,7 @@ export const CardGalery = ({data}) => {
 					<div className=" overflow-hidden rounded-card ">
 						<img className="" src={data.image} /> 
 					</div>   
-
+ 
 					<p className="text-3xl my-1 text-center">{data.title}</p>
 					<p className="text-3xl my-1 text-center">$ {data.price}</p>
 					<div className="text-center">
