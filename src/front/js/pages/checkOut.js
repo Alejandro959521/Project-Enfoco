@@ -1,12 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext,useRef } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser'
 
 
 export const CheckOut = () => {
 	const { store, actions } = useContext(Context);
 	const navigate = useNavigate()
+
+	const refForm = useRef();
+	  
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const detallesCuadros = store.listCar.map(item =>
+			`${item.title} x ${item.price} `
+		).join('\n');
+		const form = event.target;
+		form.product_details.value = detallesCuadros;
+		const serviceId = 'service_1wuh0qd';
+		const templateId = 'template_bvobmj9'; 
+		const apikey ='G-NYx_lQl60RHZ-Xo';
+   
+		emailjs.sendForm(serviceId, templateId, refForm.current, apikey)
+		.then(result => alert('Correo enviado con éxito!'))
+		.catch(error => alert('Error al enviar el correo...'))
+	}
 
 	return (
 		<div className=" ">
@@ -21,23 +41,25 @@ export const CheckOut = () => {
 			</div>
 			<div className="flex flex-wrap justify-around gap-x-12 pt-4" >
 
-				<form action="#" method="POST" className="flex-1 space-y-6 m-2 pl-8" style={{ backgroundColor: `#ffffff` }}>
+				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8" style={{ backgroundColor: `#ffffff` }}>
 					<div>
 						<label className="  text-dark mb-2 text-3xl" for="email">Email</label>
-						<input className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="email" type="email" placeholder="Dirección de correo electrónico" />
+						<input name='email' className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="email" type="email" placeholder="Dirección de correo electrónico" />
 					</div>
 					<div>
-						<label className=" text-dark mb-2 text-3xl" for="name">Nombre</label>
-						<input className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Nombre completo" />
+						<label  className=" text-dark mb-2 text-3xl" for="name">Nombre</label>
+						<input name='username' className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Nombre completo" />
 					</div>
 					<div>
 						<label className=" text-dark mb-2 text-3xl" for="name">Teléfono</label>
-						<input className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Teléfono Valido" />
+						<input  name='phone' className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Teléfono Valido" />
 					</div>
 					<div>
 						<label className="text-dark mb-2 text-3xl" for="message">Dirección</label>
-						<textarea className=" text-2xl c-input w-full p-2 rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="message" rows="4" placeholder="Dirección completa "></textarea>
+						<textarea name='address'className=" text-2xl c-input w-full p-2 rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="message" rows="4" placeholder="Dirección completa "></textarea>
 					</div>
+					<input type="hidden" id="product_details" name="product_details"/>
+
 					<button className=" w-full p-3 text-3xl rounded text-dark font-bold hover:bg-stone-600 bg-gray-500 transition duration-300" type="submit">Concretar Compra</button>
 				</form>
 

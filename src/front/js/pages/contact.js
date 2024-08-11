@@ -1,13 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext,useRef } from "react";
 import { Context } from "../store/appContext";
 import { NavbarService } from "../component/navbarService.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
 import "../../styles/contact.css";
 import imageDetalle from "../../img/detalles.jpeg";
-
+import emailjs from '@emailjs/browser'
 
 export const Contact = () => {
 	const { store, actions } = useContext(Context);
+
+	const refForm = useRef();
+	  
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const serviceId = 'service_1wuh0qd';
+		const templateId = 'template_qaay7ai'; 
+		const apikey ='G-NYx_lQl60RHZ-Xo';
+   
+		emailjs.sendForm(serviceId, templateId, refForm.current, apikey)
+		.then(result => alert('Correo enviado con éxito!'))
+		.catch(error => alert('Error al enviar el correo...'))
+	}
+
+	
 
 	return (
 		<div className=" ">
@@ -40,18 +56,18 @@ export const Contact = () => {
 
 			<div className="flex flex-wrap justify-around gap-x-12 pt-4" style={{ backgroundColor: `#000000` }}>
 				
-				<form action="#" method="POST" className="flex-1 space-y-6 m-2 pl-8">
+				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8">
 					<div>
-						<label className="  text-white mb-2  text-3xl" for="email">Email</label>
-						<input className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="email" type="email" placeholder="Enter a valid email address" />
+						<label className="  text-white mb-2  text-3xl" name='email' for="email">Email</label>
+						<input name='email' className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required  type="email" placeholder="Ej:Enfococuadros@gmail.com" />
 					</div>
 					<div>
-						<label className=" text-white mb-2 text-3xl" for="name">Name</label>
-						<input className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="name" type="text" placeholder="Enter your Name" />
+						<label className=" text-white mb-2 text-3xl" for="name">Nombre</label>
+						<input className=" text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required name='username' type="text" placeholder="Nombre Completo" />
 					</div>
 					<div>
-						<label className="text-white mb-2 text-3xl" for="message">Message</label>
-						<textarea className=" text-2xl custom-input w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="message" rows="4" placeholder="Enter your message"></textarea>
+						<label className="text-white mb-2 text-3xl"  for="message">Deja tu Mensaje</label>
+						<textarea name='message' className=" text-2xl custom-input w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="message" rows="4" placeholder="Comentario"></textarea>
 					</div>
 					<button className=" w-full p-3 text-2xl rounded text-white font-bold hover:bg-stone-600 transition duration-300" type="submit">ENVIAR</button>
 				</form>
