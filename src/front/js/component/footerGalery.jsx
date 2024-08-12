@@ -13,7 +13,7 @@ export const FooterGalery = () => (
         <img className = "w-24 h-24 md:w-48 md:h-48" src={logo} />   
 
         </div>
-
+   
         <div className=" py-2 ">
             <p className="text-3xl font-bold mb-8">Acerca de Enfoce Cuadros:</p>
             <p className="text-2xl mb-8">fotografía de alta calidad y diseño <br />al alcance de tu habitación</p>
