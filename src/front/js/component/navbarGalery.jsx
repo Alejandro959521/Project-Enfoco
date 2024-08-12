@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/LogoPrueba.png";
+import logo2 from "../../img/logo3.png";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +17,7 @@ export const NavbarGalery = () => {
 			<div className="mb-4 md:mb-0 ml-4">
 				<Link to="/">
 
-					<img className="w-24 h-24 md:w-32 md:h-32" src={logo} />
+					<img className="pt-4 w-24 h-24 md:w-36 md:h-36" src={logo2} />
 				</Link>
 
 			</div>

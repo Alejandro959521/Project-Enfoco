@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { faTwitter, faInstagram, faFacebook, faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../../styles/galery.css";
+import logo from "../../img/logonegro.png";
 
 
 export const FooterGalery = () => (
@@ -9,7 +10,8 @@ export const FooterGalery = () => (
     <div className="flex justify-around  items-center flex-col md:flex-row py-4">
 
         <div className="text-left ">
-            <p className="text-2xl">Logo</p>
+        <img className = "w-24 h-24 md:w-48 md:h-48" src={logo} />   
+
         </div>
 
         <div className=" py-2 ">

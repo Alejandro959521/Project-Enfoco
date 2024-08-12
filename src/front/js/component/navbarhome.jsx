@@ -5,6 +5,7 @@ import "../../styles/home.css";
 import { Context } from "../store/appContext.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import logo2 from "../../img/logo3.png";
 
 
 
@@ -20,7 +21,7 @@ export const Navbarhome = () => {
 				
 				<Link className= " " to="/">
 				
-				<img className = " w-24 h-24 md:w-32 md:h-32" src={logo} />
+				<img className = "pt-4 w-24 h-24 md:w-36 md:h-36" src={logo2} />
 				</Link>
  
 				</div>
