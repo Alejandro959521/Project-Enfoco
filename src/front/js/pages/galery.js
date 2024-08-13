@@ -62,14 +62,14 @@ export const Galery = () => {
 
 			<NavbarGalery />
 			
-			<div className=" px-24 py-14 " style={{ backgroundColor: `#000000` }}>
+			<div className=" px-4 md:px-24 py-8 md:py-14 " style={{ backgroundColor: `#000000` }}>
 
-				<div className="rounded-image h-screen galeryimag" style={{ backgroundImage: `url(${image})` }}>
+				<div className="rounded-image h-screen bg-cover bg-center galeryimag" style={{ backgroundImage: `url(${image})` }}>
 
-					<p className="flex justify-center text-6xl pt-4" >Explora nuestro catálogo</p>
+					<p className=" text-center text-3xl md:text-6xl pt-4" >Explora nuestro catálogo</p>
 
 					<br />
-					<p className="flex justify-center text-4xl">Encuentra el mejor cuadro que se adecue a tu vida</p>
+					<p className="text-xl md:text-4xl text-center">Encuentra el mejor cuadro que se adecue a tu vida</p>
 				</div>
 
 			</div  >
