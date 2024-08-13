@@ -12,16 +12,16 @@ export const Home = () => {
 	const { store, actions } = useContext(Context); 
 	
 	return (
-		<div className=" backimage full-height flex flex-col " style={{ backgroundImage: `url(${home1})` }}>
- 
+		<div className=" backimage full-height flex flex-col  min-h-screen" style={{ backgroundImage: `url(${home1})` }}>
+   
 			<Navbarhome />
-		
-			<div className="flex-1 flex justify-center items-center">
+		   
+			<div className="flex-1 flex justify-center items-center  p-4 text-center">
 
-				<p className=" title">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
+				<p className=" title text-lg md:text-2xl lg:text-4xl">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
  
 			</div>
-			
+			   
 			<HomeFooter />
 
 		</div>
