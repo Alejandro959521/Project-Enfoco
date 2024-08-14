@@ -33,14 +33,14 @@ module.exports = {
           }
         }, //for images
         { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
-    ]
+    ]  
   },
   resolve: {
     extensions: ['*', '.js']
   },
   plugins: [
     new HtmlWebpackPlugin({
-        favicon: '4geeks.ico',
+          
         template: 'template.html'
     }),
     new Dotenv({ safe: true, systemvars: true })

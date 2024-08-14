@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey
 
 db = SQLAlchemy()
 
@@ -17,3 +18,28 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+    
+class Elements(db.Model):
+    
+    __tablename__ = 'elements'
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(120), unique=True, nullable=False)
+    price = db.Column(db.String(80), unique=False, nullable=False)
+    category = db.Column(db.String(120), unique=False, nullable=False)
+    description = db.Column(db.String(500), unique=False, nullable=False)
+
+
+    def __repr__(self): 
+        return f'<Elements {self.title}>'
+
+    def serialize(self): 
+        return {
+            "id": self.id,
+            "title": self.title,
+            "price": self.price,
+            "category": self.category,
+            "description": self.description 
+
+            # do not serialize the password, its a security breach
+        }    

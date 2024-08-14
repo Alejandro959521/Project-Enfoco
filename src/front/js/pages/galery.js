@@ -7,9 +7,9 @@ import { FooterGalery } from "../component/footerGalery.jsx";
 import "../../styles/galery.css";
 
 
-
-export const Galery = () => { 
-
+   
+export const Galery = () => {    
+  
 	const { store, actions } = useContext(Context);
 
 	const items_per_page = 6

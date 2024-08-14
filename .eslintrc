@@ -20,7 +20,7 @@
     "react/jsx-indent": "off",
     "react/jsx-indent-props": "off",
     "comma-dangle": [1, { //when to use the last comma
-        "arrays": "never",
+        "arrays": "never",  
         "objects": "never",
         "imports": "never",
         "exports": "never",
