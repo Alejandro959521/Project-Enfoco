@@ -76,4 +76,36 @@ def add_element():
         "message":"Element created successfully"
     }), 201  
 
+@api.route("/elements", methods=["GET"])
+def get_all_pictures():
+    
+    valor = Elements.query.all()
    
+    if valor is None:
+
+         return jsonify("elemenst it's none"), 404
+    photos = [item.serialize() for item in valor]
+
+    return jsonify(photos), 200
+
+
+@api.route("/elements/delete/<int:element_id>", methods=["DELETE"])
+def delete_picture(element_id):
+    
+    existing_picture = Elements.query.get(element_id)
+
+    if not existing_picture:
+      return jsonify({
+        "message": "the picture does not exist"
+     }), 400
+
+    try:
+        db.session.delete(existing_picture)
+        db.session.commit()
+    except Exception as error:
+      return jsonify({
+          "message": "the picture cannot be deleted",
+          "error": error.args
+      }), 400
+    
+    return jsonify({"message": "removed picture"}), 200
