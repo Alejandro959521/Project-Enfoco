@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
-
+import os
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -34,6 +34,16 @@ class Elements(db.Model):
 
     def __repr__(self):  
         return f'<Elements {self.title}>'
+    
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'title': self.title, 
+            'price': self.price,
+            'category': self.category,
+            'description': self.description,
+            'image': f"front/img/{os.path.basename(self.image)}"  
+    }
 
     def serialize(self): 
         return {

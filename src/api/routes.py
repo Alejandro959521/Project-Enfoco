@@ -8,7 +8,7 @@ from flask_cors import CORS
 import base64
 import os
 
-api = Blueprint('api', __name__)
+api = Blueprint('api', __name__, static_folder='front')
 
 # Allow CORS requests to this API
 CORS(api)
@@ -49,7 +49,7 @@ def add_element():
     if Elements.query.filter_by(title=title).first():
         return jsonify({"error": "El título ya existe"}), 409
 
-    # Crear un nuevo elemento
+    # Crear un nuevo elemento 
     new_element = Elements(
         title=title,
         price=price,
@@ -72,9 +72,7 @@ def add_element():
         }), 500
     
 
-    return jsonify({
-        "message":"Element created successfully"
-    }), 201  
+    return jsonify(new_element.to_dict()), 201  
 
 @api.route("/elements", methods=["GET"])
 def get_all_pictures():
@@ -84,7 +82,7 @@ def get_all_pictures():
     if valor is None:
 
          return jsonify("elemenst it's none"), 404
-    photos = [item.serialize() for item in valor]
+    photos = [element.to_dict() for element in valor]
 
     return jsonify(photos), 200
 

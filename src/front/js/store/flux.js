@@ -93,7 +93,70 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ sum: Number(total.toFixed(2))});
 
     
-			}
+			},
+
+			getData2: async () => {
+				try {
+
+					const url = process.env.BACKEND_URL
+					const options = {
+						method: "GET",
+						headers: {
+							"Content-type": "Application/json"
+						}
+
+					}
+					const respond = await fetch(url + "api/elements", options);
+					
+					if (respond.ok){
+						
+						const body = await respond.json(); 
+					
+						setStore({ data: body }) 
+						//console.log("el array desde flux",getStore().data);
+
+					}
+				
+
+				} catch (error) {
+					console.log(error);
+
+				}
+
+
+
+			},
+
+			deletePicture: async (picture_id) => {
+				const actions = getActions()
+				try {
+
+					const url = process.env.BACKEND_URL
+					const options = {
+						method: "DELETE",
+						headers: {
+							"Content-type": "Application/json"
+						},
+						body: JSON.stringify()
+					}
+					const respond = await fetch(url + `api/elements/delete/${picture_id}`, options);
+					
+					if (respond.ok){
+						setStore({data:data.filter(card => card.id !== picture_id)})
+						alert("eliminado con exito")	
+									
+
+					}
+				
+
+				} catch (error) {
+					console.log(error);
+
+				}
+
+
+
+			},
 
 		
 			

@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect }from "react";
 import "../../styles/galery.css";
-import { useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 
 
-export const CardGalery = ({data}) => {
+
+export const CardDelete = ({data}) => {
 	
-	const navigate = useNavigate()
+	
+	const { store, actions } = useContext(Context);
 
+const deleted = (picture_id) => {
+
+	actions.deletePicture(picture_id)
+	
+
+}
+
+
+	 
 
 	return (
-			   
+			
 			<div className= "gap-5 p-10"  >
 
 				<div className="flex flex-col rounded-card h-[500px] bg-white">
 					<div className=" overflow-hidden rounded-card ">
-						<img className="" src={data.image} /> 
+						<img className="" src={process.env.BACKEND_URL + data.image} /> 
 					</div>   
  
 					<p className="text-3xl my-1 text-center">{data.title}</p>
@@ -23,11 +34,10 @@ export const CardGalery = ({data}) => {
 					<div className="text-center">
 						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 " style={{ backgroundColor: `#0D0909` }}
 						onClick={() => {
-							navigate(`/Detalle/${data.id}`)
+							deleted(data.id)
 						}}
 						>
-							
-							Detallar
+										Eliminar
 						</button>
 
 					</div>
