@@ -3,20 +3,17 @@ import "../../styles/galery.css";
 import { Context } from "../store/appContext";
 
 
-
-
-export const CardDelete = ({data}) => {
-	
+export const CardDelete = ({data, onItemDeleted }) => {
 	
 	const { store, actions } = useContext(Context);
 
-const deleted = (picture_id) => {
-
-	actions.deletePicture(picture_id)
-	
-
-}
-
+	const deleted = async (picture_id) => {
+  
+		await actions.deletePicture(picture_id)
+		onItemDeleted();   
+		console.log("desde card delete",store.data)
+		
+   }
 
 	 
 
@@ -35,6 +32,7 @@ const deleted = (picture_id) => {
 						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 " style={{ backgroundColor: `#0D0909` }}
 						onClick={() => {
 							deleted(data.id)
+							
 						}}
 						>
 										Eliminar

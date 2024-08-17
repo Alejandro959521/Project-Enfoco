@@ -3,7 +3,6 @@ import { Context } from "../store/appContext";
 import { CardDelete } from "../component/cardDelete.jsx";
 import "../../styles/galery.css";
 
-
    
 export const DeleteItem = () => {    
   
@@ -15,22 +14,26 @@ export const DeleteItem = () => {
 
 	const [currentPage, setCurrentPage] = useState(0);
 
+	const updateItems = () => {
+		let valor = store.data;
+		setItems([...valor].splice(currentPage * items_per_page, items_per_page))
+		
+		console.log("desde delete", store.data)  
+
+	}
+  
 	let getinfo = async () => {
 		
-		await actions.getData2() 
-		let valor = store.data 
-		console.log("desde delete", store.data)
-		setItems([...valor].splice(0, items_per_page))
-		
+		await actions.getData2();
+		updateItems();
    
-	}    
-
+	}  
+	     
 	useEffect(() => {
 	  getinfo()	
-	}, [])
+	 
+	}, [])  
        
-	console.log("array en 6 ", items); 
-
 	const nextPage = () => {
 
 		const totalItems = store.data.length;
@@ -63,10 +66,10 @@ export const DeleteItem = () => {
 				<div className="  grid grid-cols-1 md:grid-cols-3 gap-5 " >
 
 					{
-
+ 
 						items.map((item, index) => (
 
-							<CardDelete data={item} key={index} />
+							<CardDelete data={item} key={index} onItemDeleted={updateItems}/>
 
 						))
 

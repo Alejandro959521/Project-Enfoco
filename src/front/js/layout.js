@@ -36,7 +36,7 @@ const Layout = () => {
                         <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
                         <Route element={<CheckOut/>} path="/CheckOut"/>
                         <Route element={<Add/>} path="/Add"/>
-                        {/* <Route element={<DeleteItem/>} path="/delete"/> */}
+                        <Route element={<DeleteItem/>} path="/delete"/>
 
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>   

@@ -129,6 +129,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			deletePicture: async (picture_id) => {
 				const actions = getActions()
+				let store = getStore()
 				try {
 
 					const url = process.env.BACKEND_URL
@@ -140,9 +141,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						body: JSON.stringify()
 					}
 					const respond = await fetch(url + `api/elements/delete/${picture_id}`, options);
-					
+					  
 					if (respond.ok){
-						setStore({data:data.filter(card => card.id !== picture_id)})
+						setStore({data:store.data.filter(card => card.id !== picture_id)})
+						console.log("desde delete flux",store.data)
+						
 						alert("eliminado con exito")	
 									
 

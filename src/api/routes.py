@@ -93,9 +93,9 @@ def delete_picture(element_id):
     existing_picture = Elements.query.get(element_id)
 
     if not existing_picture:
-      return jsonify({
+      return jsonify({ 
         "message": "the picture does not exist"
-     }), 400
+     }), 400 
 
     try:
         db.session.delete(existing_picture)
@@ -107,3 +107,5 @@ def delete_picture(element_id):
       }), 400
     
     return jsonify({"message": "removed picture"}), 200
+
+
