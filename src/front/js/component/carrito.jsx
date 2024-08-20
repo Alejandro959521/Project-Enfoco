@@ -25,7 +25,7 @@ export const Carrito = () => {
                                 <p className="text-4xl font-bold">Mi Carrito</p>
 
                                 <i className="fa-solid fa-xmark cursor-pointer ico "
-                                        onClick={() => { actions.closeCart() }}
+                                        onClick={() => { actions.closeCart(),actions.setSelectIcon(null) }}
                                 ></i>
 
                         </div>

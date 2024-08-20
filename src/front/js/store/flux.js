@@ -5,14 +5,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 			data:[],
 			isCarOpen:false,
 			listCar:[],
-			sum:0
-
+			sum:0,
+			navbarSelect: localStorage.getItem("navbarSelect") || "Inicio",
+			selectIcon:null
 			
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
+
+			setSelectIcon:(value) =>{
+
+				setStore({selectIcon:value});
+
+			},
 			openCart: () => { setStore({ isCarOpen: true })},
-			closeCart: () => { setStore({ isCarOpen: false })},
+			closeCart: () => { setStore({ isCarOpen: false })}, 
+
+			navOpt: (value) =>{
+				setStore({navbarSelect:value});
+				localStorage.setItem("navbarSelect",value) 
+			},
 				
 			getData: async () => {
 				try {

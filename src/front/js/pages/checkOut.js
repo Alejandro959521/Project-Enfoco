@@ -43,7 +43,7 @@ export const CheckOut = () => {
 
 				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8" style={{ backgroundColor: `#ffffff` }}>
 					<div>
-						<label className="  text-dark mb-2 text-3xl" for="email">Email</label>
+						<label className="text-dark mb-2 text-3xl" for="email">Email</label>
 						<input name='email' className=" text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="email" type="email" placeholder="Dirección de correo electrónico" />
 					</div>
 					<div>

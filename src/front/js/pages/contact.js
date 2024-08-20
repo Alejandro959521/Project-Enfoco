@@ -50,8 +50,8 @@ export const Contact = () => {
 					<i className="fas fa-envelope text-4xl mb-4"></i>
 					<h3 className="text-xl font-bold mb-2">CORREO ELECTRÓNICO</h3>
 					<p className="text-lg">Angela@foto.com</p>
-				</div>
-			</div>
+				</div> 
+			</div> 
 
 
 			<div className="flex flex-wrap justify-around gap-x-12 pt-4" style={{ backgroundColor: `#000000` }}>
