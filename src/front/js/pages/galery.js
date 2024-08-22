@@ -5,6 +5,7 @@ import image from "../../img/imagegalery.jpeg";
 import { CardGalery } from "../component/cardGalery.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
 import "../../styles/galery.css";
+import { ImageRandom } from "../component/imageRandom.jsx";
 
 
    
@@ -75,13 +76,7 @@ export const Galery = () => {
 			
 			<div className=" px-4 md:px-24 py-8 md:py-14 " style={{ backgroundColor: `#000000` }}>
 
-				<div className="rounded-image h-screen bg-cover bg-center galeryimag" style={{ backgroundImage: `url(${image})` }}>
-
-					<p className=" text-center text-3xl md:text-6xl pt-4" >Explora nuestro catálogo</p>
-
-					<br />
-					<p className="text-xl md:text-4xl text-center">Encuentra el mejor cuadro que se adecue a tu vida</p>
-				</div>
+				<ImageRandom/>
 
 			</div  >
 
@@ -103,10 +98,10 @@ export const Galery = () => {
 
 			</div>
 			<div className="flex justify-around text-3xl text-white py-3" style={{ backgroundColor: `#7B7C81` }}>
-				<button onClick={prevPage}
-				>Anterior</button>
+				<button className="hover:text-teal-950 hover:underline underline-offset-8" onClick={prevPage}
+				>  Anterior </button>
 				<p>Pag {currentPageG + 1}...{Math.ceil((store.data.length) / 6)}</p>
-				<button onClick={nextPage}
+				<button className="hover:text-teal-950 hover:underline underline-offset-8" onClick={nextPage}
 				>Siguente</button>
 			</div>
 			<footer className="mx-auto text-white my-auto py-10" style={{ backgroundColor: `#0D0909` }}>

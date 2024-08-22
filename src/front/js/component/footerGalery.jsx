@@ -26,10 +26,10 @@ export const FooterGalery = () => (
             <p className="text-2xl py-2">EnfoceCuadros@gmail.com <br /> +564123434567, Buenos Aires <br /> Argentina</p>
 
             <div className="flex justify-start space-x-4  py-2 ">
-                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faTwitter} className=" icong " /></a>
-                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faInstagram} className=" icong " /></a>
-                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faFacebook} className=" icong " /></a>
-                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faLinkedin} className=" icong " /></a>
+                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faTwitter} className=" icong hover:text-gray-500" /></a>
+                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faInstagram} className=" icong hover:text-gray-500" /></a>
+                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faFacebook} className=" icong hover:text-gray-500" /></a>
+                <a href="https://www.google.es" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faLinkedin} className=" icong hover:text-gray-500" /></a>
                
 
             </div>

@@ -17,14 +17,14 @@ export const Carrito = () => {
         }
 
 
-        return (
+        return ( 
 
                 <aside className={` ${store.isCarOpen ? 'flex' : 'hidden'} product-detail flex-col right-0 fixed bg-white border border-black rounded-lg mr-0.5 h-screen`}>
 
                         <div className="flex justify-around items-center mt-4 pl-20">
                                 <p className="text-4xl font-bold">Mi Carrito</p>
 
-                                <i className="fa-solid fa-xmark cursor-pointer ico "
+                                <i className="fa-solid fa-xmark cursor-pointer ico hover:text-sky-700"
                                         onClick={() => { actions.closeCart(),actions.setSelectIcon(null) }}
                                 ></i>
 
@@ -40,7 +40,7 @@ export const Carrito = () => {
 
                                         store.listCar.map((item, index) => {
 
-                                                return (
+                                                 return (
                                                         <div key={index} className=" flex items-center justify-between px-6 py-2 ">
                                                                 <div className="flex items-center gap-2">
                                                                         <figure className="w-20 h-20">
@@ -73,9 +73,13 @@ export const Carrito = () => {
                         </div>
 
                         <button className="bg-black m-4 p-3 text-2xl text-white rounded-lg" 	onClick={() => {
-							navigate(`/CheckOut`)  
-						}}
-                                                disabled={store.listCar.length === 0} 
+                                if (store.listCar.length === 0){
+
+                                        alert("No puedes finalizar la compra sin artículos en el carrito.");
+                                } else {navigate(`/CheckOut`) }
+							 
+						}}   
+                                                //disabled={store.listCar.length === 0} 
                                                 >Finalizar Compra </button>
 
 
