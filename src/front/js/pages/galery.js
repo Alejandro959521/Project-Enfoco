@@ -73,12 +73,12 @@ export const Galery = () => {
 		<div className=" ">
 
 			<NavbarGalery />
-			
+			 
 			<div className=" px-4 md:px-24 py-8 md:py-14 " style={{ backgroundColor: `#000000` }}>
 
 				<ImageRandom/>
-
-			</div  >
+ 
+			</div  > 
 
 
 			<div className="flex items-center justify-center  mx-auto" style={{ backgroundColor: `#7B7C81` }}>
