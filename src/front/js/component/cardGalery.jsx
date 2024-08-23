@@ -13,15 +13,15 @@ export const CardGalery = ({data,updateItems}) => {
 			   
 			<div className= "gap-5 p-10"  >
 
-				<div className="flex flex-col rounded-card h-[500px] bg-white">
-					<div className=" overflow-hidden rounded-card ">
-						<img className="" src={data.image} /> 
+				<div className="flex flex-col rounded-card h-[500px] bg-white  shadow-lg hover:shadow-2xl transition-shadow">
+					<div className=" overflow-hidden rounded-card p-4">
+						<img className="w-full h-auto rounded-md" src={data.image} /> 
 					</div>   
  
-					<p className="text-3xl my-1 text-center">{data.title}</p>
-					<p className="text-3xl my-1 text-center">$ {data.price}</p>
+					<p className="text-3xl my-1 text-center font-semibold text-gray-900">{data.title}</p>
+					<p className="text-3xl my-1 text-center text-gray-700">$ {data.price}</p>
 					<div className="text-center">
-						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 bg-[#0D0909] hover:bg-teal-900" 
+						<button className="text-4xl text-center text-white rounded-lg px-4 my-2 bg-[#0D0909] hover:bg-teal-900 hover:scale-105 transition-transform duration-300" 
 						onClick={() => {
 							navigate(`/Detalle/${data.id}`)
 							updateItems();

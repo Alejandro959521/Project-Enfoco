@@ -72,14 +72,14 @@ export const Carrito = () => {
                                 <p>{store.sum} $</p>
                         </div>
 
-                        <button className="bg-black m-4 p-3 text-2xl text-white rounded-lg" 	onClick={() => {
+                        <button className="bg-black m-4 p-3 text-2xl text-white rounded-lg transform transition-transform duration-300 hover:scale-105" onClick={() => {
                                 if (store.listCar.length === 0){
 
                                         alert("No puedes finalizar la compra sin artículos en el carrito.");
                                 } else {navigate(`/CheckOut`) }
 							 
 						}}   
-                                                //disabled={store.listCar.length === 0} 
+                                                
                                                 >Finalizar Compra </button>
 
 
