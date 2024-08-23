@@ -39,7 +39,7 @@ export const ImageRandom = () => {
             <div className="
         relative rounded-lg overflow-hidden
          h-screen bg-cover bg-center transition-all duration-700 transform " style={{ backgroundImage: `url(${listImage[currentImageIndex]})` }}>
-                <p className=" text-center text-3xl md:text-6xl mt-4 font-extrabold drop-shadow-md animate-fadeInUp" >Explora nuestro catálogo</p>
+                <p className=" text-center text-4xl md:text-6xl mt-4 font-extrabold drop-shadow-md animate-fadeInUp" >Explora nuestro catálogo</p>
 
                 <br />
                 <p className="text-xl md:text-4xl text-center mt-4 font-light drop-shadow-sm animate-fadeInUp delay-2">Encuentra el mejor cuadro que se adecue a tu vida</p>

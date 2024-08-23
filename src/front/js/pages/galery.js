@@ -70,7 +70,9 @@ export const Galery = () => {
 	}  
 
 	return (
-		<div className=" ">
+		<div className=""
+		
+		>
 
 			<NavbarGalery />
 			 
@@ -81,8 +83,8 @@ export const Galery = () => {
 			</div  > 
 
 
-			<div className="flex items-center justify-center  mx-auto" style={{ backgroundColor: `#7B7C81` }}>
-				<div className="  grid grid-cols-1 md:grid-cols-3 gap-5 " >
+			<div className="flex items-center justify-center  mx-auto py-12" style={{ backgroundColor: `#4A4B51` }}>
+				<div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 " >
 
 					{
 

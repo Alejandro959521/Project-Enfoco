@@ -75,7 +75,7 @@ export const GaleryDetalle = () => {
 
 
 					</div>
-
+ 
 				</div>
 
 			</div>

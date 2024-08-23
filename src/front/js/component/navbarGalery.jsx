@@ -13,7 +13,7 @@ export const NavbarGalery = () => {
 
 	return (
 
-		<div className="flex items-center p-4 h-auto md:h-20 flex-col md:flex-row justify-between" style={{ backgroundColor: `#7B7C81` }}>
+		<div className="flex items-center p-4 h-auto md:h-20 flex-col md:flex-row justify-between" style={{ backgroundColor: `#5B5C62` }}>
 			<div className="mb-4 md:mb-0 ml-4">
 				<Link to="/"  onClick={() => actions.navOpt("Inicio")} className={`link hover:font-bold ${store.navbarSelect === "Inicio" ? "font-bold" : ""}`}>
 
@@ -42,7 +42,7 @@ export const NavbarGalery = () => {
 					<FontAwesomeIcon icon={faCartPlus} className={ `text-2xl cursor-pointer  transition-transform transform hover:scale-105 ${store.selectIcon === (true) ? 'text-blue-950  transform scale-110':'' }`}
 						onClick={() => { actions.openCart(), actions.setSelectIcon(true)  }} />
 					<span className="underline underline-offset-4 absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-sm font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-						{store.listCar.length} 
+						{store.listCar.length}  
 					</span>
 				</div>
 
