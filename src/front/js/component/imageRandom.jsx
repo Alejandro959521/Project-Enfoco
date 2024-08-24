@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import image from "../../img/imagegalery.jpeg";
-import image2 from "../../img/a.jpg";
+//import image2 from "../../img/a.jpg";
 import image3 from "../../img/detalles.jpeg";
 
 import "../../styles/galery.css";
@@ -10,7 +10,7 @@ import "../../styles/galery.css";
 
 export const ImageRandom = () => {
 
-    const listImage = [image, image2, image3];
+    const listImage = [image, image3];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 

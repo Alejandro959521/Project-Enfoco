@@ -14,7 +14,7 @@ export const FooterGalery = () => (
 
         </div>
    
-        <div className=" py-2 ">
+        <div className=" py-2 text-center md:text-left">
             <p className="text-3xl font-bold mb-8">Acerca de Enfoce Cuadros:</p>
             <p className="text-2xl mb-8">fotografía de alta calidad y diseño <br />al alcance de tu habitación</p>
 

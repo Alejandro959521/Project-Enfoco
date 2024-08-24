@@ -50,8 +50,8 @@ export const GaleryDetalle = () => {
 					<div className="p-4 text-center flex flex-col overflow-hidden items-center">
 					<img className="max-w-xs" src={data.image} />
 						<p className=" text-5xl font-bold py-2">{data.title}</p>
-						<p className=" text-3xl py-2">${data.price}</p>
-						<button className=" text-3xl p-2 rounded-lg" style={{ backgroundColor: `#0D0909` }}
+						<p className=" text-4xl py-2">${data.price}</p>
+						<button className=" text-3xl p-2 rounded-lg  bg-gray-800 hover:bg-gray-600 transition-colors"
 							onClick={() => {  addToCart(data) }}
 						>
 							Añadir al Carrito 
@@ -61,17 +61,18 @@ export const GaleryDetalle = () => {
 				
 				<div className="mt-8 text-center ">
 					<p className="text-4xl">Otros cliente compraron</p>
-					<div className="flex justify-center space-x-4 mt-4">
-						<div className="max-w-xs">
+					<div className="flex justify-center mt-4">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+						<div className="w-full md:max-w-xs">
 							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
-						<div className="max-w-xs">
+						<div className="w-full md:max-w-xs">
 							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
-						<div className="max-w-xs">
+						<div className="w-full md:max-w-xs">
 							<img className="w-full rounded-lg" src={imageDetalle} />
 						</div>
-
+					</div>
 
 
 					</div>

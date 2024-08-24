@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/LogoPrueba.png";
+
 import "../../styles/home.css";
 import { Context } from "../store/appContext.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
