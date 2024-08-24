@@ -12,12 +12,12 @@ export const AboutMe = () => {
 	
 
 	return (
-		<div className=" ">
+		<div className=" w-full">
 
 			<NavbarService />
 
 			<div className="pb-8" style={{ backgroundColor: `#000000` }}>
-				<p className="text-6xl text-center text-white pt-8">Sobre Mí</p>
+				<p className="text-6xl text-center text-white pt-8 font-bold">Sobre Mí</p>
 
 			</div>
 			<div className=" " style={{ backgroundColor: `#000000` }}>

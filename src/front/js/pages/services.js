@@ -17,7 +17,7 @@ export const Services = () => {
 			<NavbarService />
 
 			<div className=" pb-8" style={{ backgroundColor: `#000000` }}>
-				<p className="text-3xl md:text-6xl  text-center  pt-8">Servícios</p>
+				<p className="text-3xl md:text-6xl  text-center font-bold pt-8">Servícios</p>
 
 			</div>
 			<div className=" " style={{ backgroundColor: `#000000` }}>
