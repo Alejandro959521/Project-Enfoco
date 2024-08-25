@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { NavbarService } from "../component/navbarService.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
 import "../../styles/contact.css";
-import imageDetalle from "../../img/detalles.jpeg";
+import Contact1 from "../../img/Contact1.jpeg";
 import emailjs from '@emailjs/browser'
 
 export const Contact = () => {
@@ -75,8 +75,8 @@ export const Contact = () => {
 				<div className="flex-1 space-y-4 m-2 text-white ">
 					<h2 className=" text-2xl md:text-4xl font-semibold mb-4 ">Déjanos tu mensaje</h2>
 					<p className="text-xl md:text-2xl leading-relaxed"> En ENFOCO CUADROS nos encanta estar en contacto con nuestros clientes </p>
-					<div className="max-w-xs">
-							<img className="w-full rounded-lg" src={imageDetalle} />
+					<div className="max-w-xl">
+							<img className="w-full rounded-lg" src={Contact1} />
 						</div>
 
 

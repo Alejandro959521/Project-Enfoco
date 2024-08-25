@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { NavbarService } from "../component/navbarService.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
+import Service2 from "../../img/Servicio2.jpeg";
+import Service3 from "../../img/Servicio3.jpeg";
+import Service4 from "../../img/Servicio4.jpeg";
+import Service5 from "../../img/Servicio5.jpeg";
+
 import imageDetalle from "../../img/detalles.jpeg";
-
-
 import "../../styles/home.css";
 
 
@@ -30,7 +33,7 @@ export const Services = () => {
 					</div>  
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xl rounded-lg " src={Service2} />
 					</div>
 
 
@@ -38,7 +41,7 @@ export const Services = () => {
 				<div className="flex flex-col md:flex-row py-8 border-b-2">
 
 					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xl rounded-lg " src={Service3} />
 					</div>
 
 					<div className="flex justify-center flex-1 flex-col text-center pr-4 md:pr-8">
@@ -143,7 +146,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-lg rounded-lg " src={Service4} />
 
 					</div>
 
@@ -174,7 +177,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xs rounded-lg " src={Service5} />
 					</div>
 
 

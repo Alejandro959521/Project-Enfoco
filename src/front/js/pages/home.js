@@ -12,7 +12,7 @@ export const Home = () => {
 	const { store, actions } = useContext(Context); 
 	
 	return (
-		<div className=" backimage full-height flex flex-col  min-h-screen bg-gray-900 bg-cover bg-center " style={{ backgroundImage: `url(${home1})` }}>
+		<div className=" backimage full-height flex flex-col  min-h-screen bg-black bg-cover bg-center " style={{ backgroundImage: `url(${home1})` }}>
    
 			<Navbarhome />
 		   

@@ -13,6 +13,9 @@ import {Carrito} from "./component/carrito.jsx";
 import {CheckOut} from "./pages/checkOut";
 import {Add} from "./pages/add";
 import {DeleteItem} from "./pages/deleteItem";
+import { LandScape } from "./pages/landScape";
+import { UrbanLife } from "./pages/urbanLife";
+import { WildLife} from "./pages/wildLife";
 
 //create your first component
 const Layout = () => {
@@ -37,6 +40,10 @@ const Layout = () => {
                         <Route element={<CheckOut/>} path="/CheckOut"/>
                         <Route element={<Add/>} path="/Add"/>
                         <Route element={<DeleteItem/>} path="/delete"/>
+                        <Route element={< WildLife/>} path="/Fauna"/>
+                        <Route element={<UrbanLife/>} path="/VidaUrbana"/>
+                        <Route element={< LandScape/>} path="/Paisaje"/>
+
 
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>   

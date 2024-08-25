@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import image from "../../img/imagegalery.jpeg";
-//import image2 from "../../img/a.jpg";
-import image3 from "../../img/detalles.jpeg";
+import image2 from "../../img/back1.jpeg";
+import image3 from "../../img/back2.jpeg";
+import image4 from "../../img/back3.jpeg";
+import image5 from "../../img/Contact1.jpeg";
 
 import "../../styles/galery.css";
 
 
-
-
 export const ImageRandom = () => {
 
-    const listImage = [image, image3];
+    const listImage = [image,image2,image3,image4,image5]
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 
@@ -26,12 +26,12 @@ export const ImageRandom = () => {
 
                 return newIndex;
             });
-        }, 5000);
+        }, 4000);
 
         // Limpiar el intervalo cuando el componente se desmonta
         return () => clearInterval(intervalId);
 
-    }, [listImage, 5000]);
+    }, [listImage, 4000]);
 
     return (
 

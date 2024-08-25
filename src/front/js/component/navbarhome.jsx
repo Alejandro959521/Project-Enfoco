@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { Context } from "../store/appContext.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faChevronDown, faChevronUp  } from '@fortawesome/free-solid-svg-icons';
 import logo2 from "../../img/logo3.png";
 
 
@@ -12,7 +12,16 @@ import logo2 from "../../img/logo3.png";
 export const Navbarhome = () => {
 
 	const { store, actions } = useContext(Context);
+	const [isCatalogOpen, setIsCatalogOpen] = useState(false);
 	
+	const handleCatalogClick = () => {
+		setIsCatalogOpen(!isCatalogOpen); 
+	  };
+
+	const handleCategoryClick = (category) => {
+		actions.navOpt(category);
+		setIsCatalogOpen(false); 
+	  };
 
 
 	return (
@@ -32,7 +41,46 @@ export const Navbarhome = () => {
 					</Link>
 					<Link to="/Galeria" onClick={() => actions.navOpt("Galeria")} className={`link hover:font-bold  transition-transform transform hover:scale-105 ${store.navbarSelect === "Galeria" ? "font-bold" : ""}`}>
 						<span  > Galería </span> 
-					</Link>					
+					</Link>
+				<div
+					className="relative"
+					onClick={handleCatalogClick} 
+				>
+					<span  
+					onClick={() => actions.navOpt("Catalogo")}
+					className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
+						Catálogo
+						<FontAwesomeIcon 
+             			icon={isCatalogOpen ? faChevronUp : faChevronDown} 
+              			className="ml-2 text-sm"
+            />
+					</span>
+					{isCatalogOpen && (
+						<div className="absolute left-0 mt-2 w-48 bg-slate-500 text-black bg-opacity-25">
+							<ul>
+								<li
+									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
+									onClick={() => handleCategoryClick("Catalogo")}
+								>
+									<Link to="/Fauna">Fauna</Link>
+								</li>
+								<li
+									className="block px-4 py-2 hover:underline underline-offset-8 cursor-pointer"
+									onClick={() => handleCategoryClick("Catalogo")}
+								>
+									<Link to="/VidaUrbana">Vida Urbana</Link>
+								</li>
+								<li
+									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
+									onClick={() => handleCategoryClick("Catalogo")}
+								>
+									<Link to="/Paisaje">Paisaje</Link>
+								</li>
+							</ul>
+						</div>
+					)}
+
+				</div>					
 					<Link to="/Servicios"  onClick={() => actions.navOpt("Servicios")} className={`link hover:font-bold  transition-transform transform hover:scale-105 ${store.navbarSelect === "Servicios" ? "font-bold" : ""}`}>
 						<span > Servicios </span>
 					</Link>
