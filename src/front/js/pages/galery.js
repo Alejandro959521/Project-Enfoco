@@ -29,7 +29,7 @@ export const Galery = () => {
   
 	let getinfo = async () => {
 		
-		await actions.getData();
+		await actions.getData2();
 		updateItems();
    
 	}    

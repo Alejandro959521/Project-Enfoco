@@ -7,9 +7,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			listCar:[],
 			sum:0,
 			navbarSelect: localStorage.getItem("navbarSelect") || "Inicio",
-			selectIcon:null
+			selectIcon:null,
+			category_pictures:[]
 			
-		},
+		}, 
 		actions: {
 			// Use getActions to call a function within a fuction
 
@@ -172,6 +173,63 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			},
+			getDetallePicture: async (id) => {  
+				try {   
+
+					const url = process.env.BACKEND_URL
+					const options = {
+						method: "GET",
+						headers: {
+							"Content-type": "Application/json"
+						}    
+
+					}
+					const respond = await fetch( url + `api/elements/${id}`, options);
+					
+					if (respond.ok){
+						
+						const body = await respond.json(); 
+						console.log("entre en detalle solo",body)
+						return body
+						
+
+					}
+				
+
+				} catch (error) {
+					console.log("error desde el flux al opteneder id picture",error);
+
+				}
+			},
+
+			geFilteredPicture: async (category) => {  
+				try {   
+
+					const url = process.env.BACKEND_URL
+					const options = {
+						method: "GET",
+						headers: {
+							"Content-type": "Application/json"
+						}    
+
+					}
+					const respond = await fetch( url + `api/elements/category/${category}`, options);
+					
+					if (respond.ok){
+						
+						const body = await respond.json(); 
+						setStore({ category_pictures: body }) 
+						
+						
+
+					}
+				
+
+				} catch (error) {
+					console.log("error desde el flux category_pictures",error);
+
+				}
+			}
 
 		
 			

@@ -56,7 +56,7 @@ export const Navbarhome = () => {
             />
 					</span>
 					{isCatalogOpen && (
-						<div className="absolute left-0 mt-2 w-48 bg-slate-500 text-black bg-opacity-25">
+						<div className="absolute left-0 mt-2 w-48 bg-black text-white ">
 							<ul>
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
@@ -74,7 +74,7 @@ export const Navbarhome = () => {
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
 									onClick={() => handleCategoryClick("Catalogo")}
 								>
-									<Link to="/Paisaje">Paisaje</Link>
+									<Link to="/Paisajes">Paisajes</Link>
 								</li>
 							</ul>
 						</div>

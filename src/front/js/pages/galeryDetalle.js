@@ -19,13 +19,13 @@ export const GaleryDetalle = () => {
 
 	let getproduct = async () => {
 
-		await actions.getData()
-		let valor = await actions.getDetalles(params.Id)
+		await actions.getData2()
+		let valor = await actions.getDetallePicture(params.Id)
 		setData(valor)
 
 		if (store.data && store.data.length > 0) {
 			const shuffled = [...store.data].sort(() => 0.5 - Math.random());
-			setRandomItems(shuffled.slice(0, 3)); // Selecciona 3 elementos aleatorios
+			setRandomItems(shuffled.slice(0, 3)); 
 		}
 
 
@@ -38,13 +38,23 @@ export const GaleryDetalle = () => {
 		actions.sumCar()
 		console.log("esto es listcar", store.listCar);
 
-	}
+	} 
 
 	useEffect(() => {
 		getproduct()
 
-	}, [])
+	}, [params.Id])
 	console.log("desde detalle", store.data)
+
+	const [selectedImage, setSelectedImage] = useState(null);
+
+    const openModal = (image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
 
 	return (
 		<div className=" ">
@@ -55,7 +65,7 @@ export const GaleryDetalle = () => {
 
 
 				<div className="p-4 text-center flex flex-col overflow-hidden items-center">
-					<img className="max-w-xs" src={data.image} />
+					<img className="max-w-xs cursor-pointer" src={process.env.BACKEND_URL + data.image} onClick={() => openModal(process.env.BACKEND_URL + data.image)}/>
 					<p className=" text-5xl font-bold py-2">{data.title}</p>
 					<p className=" text-4xl py-2">${data.price}</p>
 					<button className=" text-3xl p-2 rounded-lg  bg-gray-800 hover:bg-gray-600 transition-colors"
@@ -67,17 +77,17 @@ export const GaleryDetalle = () => {
 				</div>
 
 				<div className="mt-8 text-center ">
-					<p className="text-4xl">Otros cliente compraron</p>
+					<p className="text-4xl underline underline-offset-8 ">Otros cliente compraron</p>
 					<div className="flex justify-center mt-4">
 
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
 
 							{randomItems.map((item, index) => (
 
 								<div key={index} className="w-full md:max-w-xs"
 								onClick={() => navigate(`/detalle/${item.id}`)}
-								>
-									<img className="w-full rounded-lg shadow-lg transition-transform transform hover:scale-105" src={item.image} />
+								>  
+									<img className="w-full rounded-lg h-80 object-cover rounded-lg cursor-pointer shadow-lg transition-transform transform hover:scale-105" src={process.env.BACKEND_URL + item.image} />
 								</div>
 
 							))}
@@ -101,6 +111,18 @@ export const GaleryDetalle = () => {
 
 
 			</footer>
+			{selectedImage && (
+                <div className="fixed inset-0 bg-black  bg-opacity-75 flex justify-center items-center z-50" onClick={closeModal}>
+                    <div className="relative w-full h-full flex justify-center items-center p-4">
+                        <img 
+                            className=" max-w-full max-h-full  object-contain rounded-lg" 
+                            src={selectedImage} 
+							alt="Selected"
+                        />
+                  
+                    </div>
+                </div>
+            )}
 
 		</div>
 	);

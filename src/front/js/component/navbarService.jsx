@@ -70,9 +70,9 @@ export const NavbarService = () => {
 								</li>
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
-									onClick={() => handleCategoryClick("Catalogo")}
+									onClick={() => handleCategoryClick("Catalogo")} 
 								>
-									<Link to="/Paisaje">Paisaje</Link>
+									<Link to="/Paisajes">Paisajes</Link>
 								</li>
 							</ul>
 						</div>

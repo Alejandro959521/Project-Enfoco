@@ -86,6 +86,35 @@ def get_all_pictures():
 
     return jsonify(photos), 200
 
+@api.route("/elements/category/<string:category_name>", methods=["GET"])
+def get_pictures_by_category(category_name):
+    
+    # Filtrar elementos por categoría
+    pictures = Elements.query.filter_by(category=category_name).all()
+
+    if not pictures:
+        return jsonify({
+            "message": "No pictures found in this category"
+        }), 404  # 404 Not Found si no se encuentran elementos
+
+    # Construir una lista de los elementos encontrados
+    result = [element.to_dict() for element in pictures]
+
+    return jsonify(result), 200 
+
+
+@api.route("/elements/<int:element_id>", methods=["GET"])
+def get_picture(element_id):
+    
+    existing_picture = Elements.query.get(element_id)
+
+    if not existing_picture:
+      return jsonify({ 
+        "message": "the picture does not exist"
+     }), 400 
+
+   
+    return jsonify(existing_picture.to_dict()), 200
 
 @api.route("/elements/delete/<int:element_id>", methods=["DELETE"])
 def delete_picture(element_id):

@@ -42,7 +42,7 @@ const Layout = () => {
                         <Route element={<DeleteItem/>} path="/delete"/>
                         <Route element={< WildLife/>} path="/Fauna"/>
                         <Route element={<UrbanLife/>} path="/VidaUrbana"/>
-                        <Route element={< LandScape/>} path="/Paisaje"/>
+                        <Route element={< LandScape/>} path="/Paisajes"/>
 
 
                         <Route element={<h1>Not found!</h1>} />
