@@ -20,6 +20,7 @@ export const NavbarService = () => {
 	const handleCategoryClick = (category) => {
 		actions.navOpt(category);
 		setIsCatalogOpen(false); 
+		actions.navOpt("Catalogo");
 	  };
 
 	return (
@@ -45,7 +46,7 @@ export const NavbarService = () => {
 					onClick={handleCatalogClick} 
 				>
 					<span  
-					onClick={() => actions.navOpt("Catalogo")}
+					
 					className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
 						Catálogo
 						<FontAwesomeIcon 
@@ -54,11 +55,12 @@ export const NavbarService = () => {
             />
 					</span>
 					{isCatalogOpen && (
-						<div className="absolute left-0 mt-2 w-48 bg-black text-white border rounded shadow-lg">
+						<div className="z-50 absolute left-0 mt-2 w-48 bg-black text-white border rounded shadow-lg">
 							<ul>
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
 									onClick={() => handleCategoryClick("Catalogo")}
+									
 								>
 									<Link to="/Fauna">Fauna</Link>
 								</li>

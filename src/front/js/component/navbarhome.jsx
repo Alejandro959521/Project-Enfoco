@@ -21,6 +21,7 @@ export const Navbarhome = () => {
 	const handleCategoryClick = (category) => {
 		actions.navOpt(category);
 		setIsCatalogOpen(false); 
+		actions.navOpt("Catalogo");;
 	  };
 
 
@@ -47,7 +48,7 @@ export const Navbarhome = () => {
 					onClick={handleCatalogClick} 
 				>
 					<span  
-					onClick={() => actions.navOpt("Catalogo")}
+					
 					className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
 						Catálogo
 						<FontAwesomeIcon 
@@ -56,7 +57,7 @@ export const Navbarhome = () => {
             />
 					</span>
 					{isCatalogOpen && (
-						<div className="absolute left-0 mt-2 w-48 bg-black text-white ">
+						<div className="absolute left-0 mt-2 w-48 bg-black text-white z-50">
 							<ul>
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"

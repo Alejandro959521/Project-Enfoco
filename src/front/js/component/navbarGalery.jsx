@@ -20,6 +20,7 @@ export const NavbarGalery = () => {
 	const handleCategoryClick = (category) => {
 		actions.navOpt(category);
 		setIsCatalogOpen(false); 
+		actions.navOpt("Catalogo");
 	  };
 	return (
 
@@ -44,7 +45,7 @@ export const NavbarGalery = () => {
 					onClick={handleCatalogClick} 
 				>
 					<span  
-					onClick={() => actions.navOpt("Catalogo")}
+					
 					className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
 						Catálogo
 						<FontAwesomeIcon 

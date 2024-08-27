@@ -2,8 +2,7 @@ import React, { useContext,useState,useEffect } from "react";
 import { Context } from "../store/appContext";
 import { NavbarService } from "../component/navbarService.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
-import imageDetalle from "../../img/detalles.jpeg";
-import { useParams } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 import "../../styles/home.css";
 
@@ -76,9 +75,9 @@ export const LandScape = () => {
 			<NavbarService />
 
 			<div className="pb-8 bg-black" >
-				<p className="text-6xl text-center text-white pt-8 font-bold">Paisajes</p>
+				<p className="text-7xl text-center text-white pt-8 font-bold">Paisajes</p>
 
-			</div>
+			</div> 
 
 			<div className="flex items-center justify-center  mx-auto py-12 bg-black" >
 				<div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 " >

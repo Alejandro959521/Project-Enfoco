@@ -65,7 +65,7 @@ export const GaleryDetalle = () => {
 
 
 				<div className="p-4 text-center flex flex-col overflow-hidden items-center">
-					<img className="max-w-xs cursor-pointer" src={process.env.BACKEND_URL + data.image} onClick={() => openModal(process.env.BACKEND_URL + data.image)}/>
+					<img className="max-w-4xl cursor-pointer" src={process.env.BACKEND_URL + data.image} onClick={() => openModal(process.env.BACKEND_URL + data.image)}/>
 					<p className=" text-5xl font-bold py-2">{data.title}</p>
 					<p className=" text-4xl py-2">${data.price}</p>
 					<button className=" text-3xl p-2 rounded-lg  bg-gray-800 hover:bg-gray-600 transition-colors"
