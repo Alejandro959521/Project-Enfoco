@@ -8,6 +8,8 @@ from flask_cors import CORS
 import base64
 import os
 
+
+
 api = Blueprint('api', __name__, static_folder='front')
 
 # Allow CORS requests to this API
@@ -136,5 +138,6 @@ def delete_picture(element_id):
       }), 400
     
     return jsonify({"message": "removed picture"}), 200
+
 
 

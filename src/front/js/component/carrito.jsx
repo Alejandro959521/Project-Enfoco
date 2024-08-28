@@ -79,7 +79,8 @@ export const Carrito = () => {
                                 if (store.listCar.length === 0){
 
                                         alert("No puedes finalizar la compra sin artículos en el carrito.");
-                                } else {navigate(`/CheckOut`) }
+                                } else {navigate(`/CheckOut`), actions.closeCart()}
+                                
 							 
 						}}   
                                                 

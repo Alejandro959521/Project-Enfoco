@@ -101,8 +101,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			sumCar: () => { 
-
-				const total = getStore().listCar.reduce((acc, item) => acc + item.price, 0);
+				let store = getStore()
+				const total = store.listCar.reduce((acc, item) => acc + parseFloat(item.price || 0), 0);
+				
 				setStore({ sum: Number(total.toFixed(2))});
 
     
@@ -220,11 +221,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						const body = await respond.json(); 
 						setStore({ category_pictures: body }) 
 						
-						
-
 					}
 				
-
 				} catch (error) {
 					console.log("error desde el flux category_pictures",error);
 

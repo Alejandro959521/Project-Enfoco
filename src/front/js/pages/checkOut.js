@@ -15,7 +15,7 @@ export const CheckOut = () => {
 		event.preventDefault();
 
 		const detallesCuadros = store.listCar.map(item =>
-			`${item.title} x ${item.price} `
+			`${item.title} x ${item.price}$ `
 		).join('\n');
 		const form = event.target;
 		form.product_details.value = detallesCuadros;
@@ -74,7 +74,7 @@ export const CheckOut = () => {
 
 							<div key={index} className=" flex  items-center text-white justify-around px-6 py-2 ">
 								<div className=" flex gap-x-16 text-white items-center gap-2">
-									<figure className="w-24 h-24">
+									<figure className="w-64 h-64">
 										<img className="w-full h-full rounded-lg object-contain" src={process.env.BACKEND_URL + item.image} />
 									</figure>
 									<p className="text-2xl md:text-3xl font-medium  text-white">{item.title}</p>
