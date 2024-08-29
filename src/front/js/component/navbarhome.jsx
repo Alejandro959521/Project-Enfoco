@@ -27,8 +27,8 @@ export const Navbarhome = () => {
 
 	return (
 		
-			<div className="flex items-center p-4 h-auto md:h-20 flex-col md:flex-row justify-between">
-				<div className=" mb-4 md:mb-0 ml-4 ">
+			<div className="flex items-center p-4 h-auto lg:h-20 flex-col lg:flex-row justify-between">
+				<div className="   ml-4 ">
 				
 				<Link onClick={() => actions.navOpt("Inicio")} className={`link hover:font-bold ${store.navbarSelect === "Inicio" ? "font-bold" : ""}`} to="/">
 				
@@ -36,7 +36,7 @@ export const Navbarhome = () => {
 				</Link>
  
 				</div>
-				<div className = " flex flex-col md:flex-row text-dark text-xl md:text-3xl flex items-center mt-4 md:mt-0 md:space-x-16 md:space-y-0 space-x-0 space-y-4 md:pr-16 pr-0">
+				<div className = " flex flex-col lg:flex-row text-dark text-xl lg:text-3xl flex items-center mt-4 lg:mt-0 lg:space-x-16 lg:space-y-0 space-x-0 space-y-4 lg:pr-16 pr-0">
 					<Link to="/"  onClick={() => actions.navOpt("Inicio")} className={`link hover:font-bold  transition-transform transform hover:scale-105 ${store.navbarSelect === "Inicio" ? "font-bold" : ""}`}>
 						<span > Inicio </span> 
 					</Link>

@@ -16,7 +16,7 @@ export const Home = () => {
    
 			<Navbarhome />
 		   
-			<div className="flex-1 flex justify-center items-center  p-4 text-center">
+			<div className="flex-1 flex justify-center items-center  px-4 text-center">
 
 				<p className=" title  text-lg md:text-2xl lg:text-4xl ">  Cada paisaje tiene su historia: esa que leemos, esa que soñamos, esa que creemos  </p>
  

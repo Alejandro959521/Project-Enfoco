@@ -29,7 +29,7 @@ export const Contact = () => {
 		<div className=" w-full">
 			<NavbarService />
 			<div className="flex justify-center" style={{ backgroundColor: `#000000` }}>
-				<p className="text-4xl md:text-6xl font-bold text-center text-white pt-8">Contactame</p>
+				<p className="text-4xl md:text-6xl font-bold text-center text-white pt-8 pb-4">Contactame</p>
 
 			</div>
 

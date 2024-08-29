@@ -80,13 +80,13 @@ export const LandScape = () => {
 			</div> 
 
 			<div className="flex items-center justify-center  mx-auto py-12 bg-black" >
-				<div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 " >
+				<div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  " >
 
 					{
 
 						items.map((item, index) => (
 
-							<div key={index} className="w-full md:max-w-xs"
+							<div key={index} className="w-full md:max-w-xs px-4 py-2 md:p-0"
 								onClick={() => navigate(`/detalle/${item.id}`)}
 								>  
 									<img className="w-full rounded-lg h-80 object-cover rounded-lg cursor-pointer shadow-lg transition-transform transform hover:scale-105" src={process.env.BACKEND_URL + item.image} />

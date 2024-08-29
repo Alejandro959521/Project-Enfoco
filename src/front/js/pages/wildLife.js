@@ -87,7 +87,7 @@ export const WildLife = () => {
 
 						items.map((item, index) => (
 
-							<div key={index} className="w-full md:max-w-xs"
+							<div key={index} className="w-full md:max-w-xs px-4 py-2 md:p-0"
 								onClick={() => navigate(`/detalle/${item.id}`)}
 								>  
 									<img className="w-full rounded-lg h-80 object-cover rounded-lg cursor-pointer shadow-lg transition-transform transform hover:scale-105" src={process.env.BACKEND_URL + item.image} />

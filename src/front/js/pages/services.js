@@ -20,7 +20,7 @@ export const Services = () => {
 			<NavbarService />
 
 			<div className=" pb-8" style={{ backgroundColor: `#000000` }}>
-				<p className="text-3xl md:text-6xl  text-center font-bold pt-8">Servícios</p>
+				<p className="text-3xl md:text-6xl text-center font-bold pt-8">Servícios</p>
 
 			</div>
 			<div className=" " style={{ backgroundColor: `#000000` }}>
@@ -33,15 +33,15 @@ export const Services = () => {
 					</div>  
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xl rounded-lg " src={Service2} />
+						<img className="max-w-xs lg:max-w-xl md:max-w-sm md:max-h-72 md:px-8 rounded-lg " src={Service2} />
 					</div>
 
 
 				</div>
 				<div className="flex flex-col md:flex-row py-8 border-b-2">
 
-					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-xl rounded-lg " src={Service3} />
+					<div className="flex-1 flex justify-center mt-4 mb-4 md:mt-0">
+						<img className="max-w-xs md:max-w-sm md:max-h-72 md:px-8 lg:max-w-xl rounded-lg " src={Service3} />
 					</div>
 
 					<div className="flex justify-center flex-1 flex-col text-center pr-4 md:pr-8">
@@ -146,7 +146,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-lg rounded-lg " src={Service4} />
+						<img className="max-w-xs lg:max-w-xl rounded-lg  md:max-w-sm  md:px-8" src={Service4} />
 
 					</div>
 
