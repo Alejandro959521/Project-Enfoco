@@ -11,7 +11,7 @@ export const CardGalery = ({data,updateItems}) => {
 
 	return (
 			   
-			<div className= "gap-5 p-10"  >
+			<div className=     "gap-5 p-10"  >
 
 				<div className="flex flex-col rounded-card h-[500px] bg-white  shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"> 
 					<div className=" overflow-hidden rounded-card ">

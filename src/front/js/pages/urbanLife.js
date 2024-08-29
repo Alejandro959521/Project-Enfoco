@@ -2,7 +2,6 @@ import React, { useContext,useState,useEffect  } from "react";
 import { Context } from "../store/appContext.js";
 import { NavbarService } from "../component/navbarService.jsx";
 import { FooterGalery } from "../component/footerGalery.jsx";
-import imageDetalle from "../../img/detalles.jpeg";
 import { useNavigate } from "react-router-dom";
 import "../../styles/home.css";
 

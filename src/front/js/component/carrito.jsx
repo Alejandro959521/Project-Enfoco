@@ -84,7 +84,7 @@ export const Carrito = () => {
 							 
 						}}   
                                                 
-                                                >Finalizar Compra </button>
+                                                > Finalizar Compra </button>
 
 
 
