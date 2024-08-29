@@ -122,17 +122,27 @@ def get_picture(element_id):
 def delete_picture(element_id):
     
     existing_picture = Elements.query.get(element_id)
+    print("desde delete back",existing_picture.image)
 
     if not existing_picture:
       return jsonify({ 
         "message": "the picture does not exist"
      }), 400 
-
+    
+    image_path = existing_picture.image
     try:
         db.session.delete(existing_picture)
         db.session.commit()
+        
+        if os.path.exists(image_path):
+            os.remove(image_path)
+        else:
+            return jsonify({
+                "message": "the picture data was deleted but the image file was not found"
+            }), 200
+
     except Exception as error:
-      return jsonify({
+      return jsonify({ 
           "message": "the picture cannot be deleted",
           "error": error.args
       }), 400

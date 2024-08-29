@@ -13,8 +13,8 @@ export const CardGalery = ({data,updateItems}) => {
 			   
 			<div className= "gap-5 p-10"  >
 
-				<div className="flex flex-col rounded-card h-[550px] bg-white  shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"> 
-					<div className=" overflow-hidden rounded-card p-4">
+				<div className="flex flex-col rounded-card h-[500px] bg-white  shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"> 
+					<div className=" overflow-hidden rounded-card ">
 						<img className="w-full h-full rounded-md" src={process.env.BACKEND_URL + data.image} /> 
 					</div>         
 				
