@@ -160,7 +160,7 @@ export const Services = () => {
 						<img className="max-w-xs rounded-lg " src={imageDetalle} />
 					</div>
 
-					<div className="flex justify-center flex-1 flex-col text-center pr-4 md:pr-8">
+					<div className="flex justify-center flex-1 flex-col text-center pr-4 md:pr-8 pt-4">
 						<p className="text-white text-2xl md:text-4xl mb-4 font-bold">Venta de Cuadros y Fotografías</p>
 						<p className=" text-white text-xl md:text-3xl ">Nuestra galería cuenta con una extensa colección de cuadros y fotografías, cuidadosamente seleccionados por su calidad y belleza. Ofrecemos una variedad de estilos que van desde lo clásico hasta lo contemporáneo, pasando por arte abstracto, paisajes, retratos y fotografía artística. Nuestro objetivo es ayudarte a encontrar la pieza perfecta que complemente tu espacio y refleje tu estilo personal.</p>
 

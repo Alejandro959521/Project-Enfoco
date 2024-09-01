@@ -29,19 +29,19 @@ export const CheckOut = () => {
 	}
 
 	return (
-		<div className="w-full mx-auto p-4">
-			<div className="border-b-2 flex items-center justify-between px-6 py-4" style={{ borderBottomColor: `#000000` }}>
+		<div className="w-full mx-auto p-4 ">
+			<div className="border-b-2 flex items-center justify-between px-4 md:px-6 py-2 md:py-4" style={{ borderBottomColor: `#000000` }}>
 
-				<p className="text-3xl md:text-4xl font-bold" >Finalizar Compra</p>
+				<p className="text-2xl md:text-4xl font-bold" >Finalizar Compra</p>
 				<i className="fa-solid fa-xmark cursor-pointer ico2 hover:text-gray-700"
 					onClick={() => { 
 						navigate(`/Galeria`)
 					}}
 				></i>
 			</div>
-			<div className="flex flex-wrap justify-around gap-8 pt-6" >
+			<div className="flex flex-wrap justify-around gap-4 md:gap-8 pt-6" >
 
-				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8 rounded-lg shadow-md" style={{ backgroundColor: `#ffffff` }}>
+				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 p-2 md:pl-8 rounded-lg shadow-md" style={{ backgroundColor: `#ffffff` }}>
 					<div>
 						<label className="block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2 " for="email">Email</label>
 						<input name='email' className=" text-xl md:text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="email" type="email" placeholder="Dirección de correo electrónico" />
@@ -60,10 +60,10 @@ export const CheckOut = () => {
 					</div>
 					<input type="hidden" id="product_details" name="product_details"/>
 
-					<button className=" w-full p-3 text-2xl md:text-3xl rounded text-dark font-bold hover:bg-stone-600 bg-gray-500 transition duration-300" type="submit">Concretar Compra</button>
+					<button className=" w-full p-2 md:p-3 text-2xl md:text-3xl rounded text-dark font-bold hover:bg-stone-600 bg-gray-500 transition duration-300" type="submit">Concretar Compra</button>
 				</form>
 
-				<div className="flex-1 space-y-4 m-2 text-dark flex flex-col pt-4 rounded-lg shadow-md " style={{ backgroundColor: `#000000` }}>
+				<div className="flex-1 space-y-4 m-2 text-dark flex flex-col pt-4 rounded-lg shadow-md bg-black" >
 					<div className="flex justify-center border-b-2 pb-2">
 						<p className="text-3xl md:text-4xl text-white "> Cuadros Seleccionados </p>
 					</div>
@@ -73,8 +73,8 @@ export const CheckOut = () => {
 						store.listCar.map((item, index) => (
 
 							<div key={index} className=" flex  items-center text-white justify-around px-6 py-2 ">
-								<div className=" flex gap-x-16 text-white items-center gap-2">
-									<figure className="w-64 h-64">
+								<div className=" flex md:gap-x-16 text-white items-center gap-2">
+									<figure className="w-32 h-32 md:w-64 md:h-64">
 										<img className="w-full h-full rounded-lg object-contain" src={process.env.BACKEND_URL + item.image} />
 									</figure>
 									<p className="text-2xl md:text-3xl font-medium  text-white">{item.title}</p>

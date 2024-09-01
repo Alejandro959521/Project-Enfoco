@@ -26,7 +26,7 @@ export const LandScape = () => {
 		setItems([...valor].splice(currentPageC * items_per_page, items_per_page))
 		
 	}
-  
+       
 	let getinfo = async () => {
 		
 		await actions.geFilteredPicture("paisajes");
