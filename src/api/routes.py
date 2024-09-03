@@ -9,7 +9,7 @@ import base64
 import os
 
 
-
+app = Flask(__name__, static_folder='front')
 api = Blueprint('api', __name__, static_folder='public')
 
 # Allow CORS requests to this API
@@ -43,7 +43,7 @@ def add_element():
 
     image_filename = f"{title.replace(' ', '_')}.jpg"
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    image_filepath = os.path.join(current_dir, '..', 'front', 'img', image_filename)
+    image_filepath = os.path.join(current_dir, '..', 'front', 'img2', image_filename)
     with open(image_filepath, 'wb') as image_file:
         image_file.write(base64.b64decode(image_data))
 
