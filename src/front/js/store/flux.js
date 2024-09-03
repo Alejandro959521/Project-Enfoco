@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {    
 
-			data:[],
+			data:[], 
 			isCarOpen:false,
 			listCar:[],
 			sum:0,

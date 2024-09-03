@@ -2,6 +2,8 @@ import React, { useContext,useEffect } from "react";
 import { Context } from "../store/appContext";
 import home1 from "../../img/Home1.jpeg";
 import "../../styles/home.css";
+import "../../styles/index.css";
+
 import { Navbarhome } from "../component/navbarhome.jsx";
 import { HomeFooter } from "../component/homeFooter.jsx";
 

@@ -16,7 +16,8 @@ import {DeleteItem} from "./pages/deleteItem";
 import { LandScape } from "./pages/landScape";
 import { UrbanLife } from "./pages/urbanLife";
 import { WildLife} from "./pages/wildLife";
-
+import "./../styles/home.css";
+import "./../styles/index.css";
 //create your first component
 const Layout = () => {
     //the basename is used when your project is published in a subdirectory and not in the root of the domain
