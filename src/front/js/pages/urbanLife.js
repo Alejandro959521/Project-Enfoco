@@ -39,7 +39,7 @@ export const UrbanLife = () => {
 	  
 	}, [])
        
-	console.log("array en 6 ", items); 
+	//console.log("array en 6 ", items); 
 
 	const nextPage = () => {
 

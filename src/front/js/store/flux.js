@@ -83,7 +83,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				
 
 				} catch (error) {
-					console.log("error desde el flux detalles",error);
+					console.log("error ",error);
 
 				}
 			},
@@ -158,7 +158,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					  
 					if (respond.ok){
 						setStore({data:store.data.filter(card => card.id !== picture_id)})
-						console.log("desde delete flux",store.data)
+						//console.log("desde delete flux",store.data)
 						
 						alert("eliminado con exito")	
 									
@@ -190,7 +190,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (respond.ok){
 						
 						const body = await respond.json(); 
-						console.log("entre en detalle solo",body)
+						//console.log("entre en detalle solo",body)
 						return body
 						
 
@@ -198,7 +198,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				
 
 				} catch (error) {
-					console.log("error desde el flux al opteneder id picture",error);
+					console.log("error ",error);
 
 				}
 			},
@@ -224,7 +224,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				
 				} catch (error) {
-					console.log("error desde el flux category_pictures",error);
+					console.log("error ",error);
 
 				}
 			}

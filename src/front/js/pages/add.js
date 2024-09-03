@@ -56,7 +56,7 @@ export const Add = () => {
       if (response.ok) {
         const data = await response.json();
         alert('Elemento añadido con éxito');
-        console.log(data);
+        //console.log(data);
       } else {
         alert('Error al añadir el elemento');
       }

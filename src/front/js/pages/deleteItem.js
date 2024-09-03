@@ -18,7 +18,7 @@ export const DeleteItem = () => {
 		let valor = store.data;
 		setItems([...valor].splice(currentPage * items_per_page, items_per_page))
 		
-		console.log("desde delete", store.data)  
+		//console.log("desde delete", store.data)  
 
 	}
   

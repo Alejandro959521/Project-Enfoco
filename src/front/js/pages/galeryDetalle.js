@@ -36,7 +36,7 @@ export const GaleryDetalle = () => {
 		actions.openCart()
 		actions.addCart(data)
 		actions.sumCar()
-		console.log("esto es listcar", store.listCar);
+		//console.log("esto es listcar", store.listCar);
 
 	} 
 
@@ -44,7 +44,7 @@ export const GaleryDetalle = () => {
 		getproduct()
 
 	}, [params.Id])
-	console.log("desde detalle", store.data)
+	//console.log("desde detalle", store.data)
 
 	const [selectedImage, setSelectedImage] = useState(null);
 

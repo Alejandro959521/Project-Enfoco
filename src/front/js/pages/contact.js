@@ -58,15 +58,15 @@ export const Contact = () => {
 				
 				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8">
 					<div>
-						<label className="block  text-white mb-2  text-3xl" name='email' for="email">Email</label>
+						<label className="block  text-white mb-2  text-3xl" name='email' htmlFor="email">Email</label>
 						<input name='email' className=" text-xl md:text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required  type="email" placeholder="Ej:Enfococuadros@gmail.com" />
 					</div>
 					<div>
-						<label className="block text-white mb-2 text-3xl" for="name">Nombre</label>
+						<label className="block text-white mb-2 text-3xl" htmlFor="name">Nombre</label>
 						<input className=" text-xl md:text-2xl w-full p-2 custom-input rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required name='username' type="text" placeholder="Nombre Completo" />
 					</div>
 					<div>
-						<label className="block text-white mb-2 text-3xl"  for="message">Deja tu Mensaje</label>
+						<label className="block text-white mb-2 text-3xl"  htmlFor="message">Deja tu Mensaje</label>
 						<textarea name='message' className=" text-xl md:text-2xl custom-input w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-stone-500" required id="message" rows="4" placeholder="Comentario"></textarea>
 					</div>
 					<button className=" w-full p-3 text-2xl rounded text-white font-bold hover:bg-stone-600 transition duration-300 bg-slate-800" type="submit">ENVIAR</button>

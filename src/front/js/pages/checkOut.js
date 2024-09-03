@@ -4,7 +4,7 @@ import "../../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser'
 
-
+ 
 export const CheckOut = () => {
 	const { store, actions } = useContext(Context);
 	const navigate = useNavigate()
@@ -43,19 +43,19 @@ export const CheckOut = () => {
 
 				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 p-2 md:pl-8 rounded-lg shadow-md" style={{ backgroundColor: `#ffffff` }}>
 					<div>
-						<label className="block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2 " for="email">Email</label>
+						<label className="block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2 " htmlFor="email">Email</label>
 						<input name='email' className=" text-xl md:text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="email" type="email" placeholder="Dirección de correo electrónico" />
 					</div>
 					<div>
-						<label  className=" block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" for="name">Nombre</label>
+						<label  className=" block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" htmlFor="name">Nombre</label>
 						<input name='username' className=" text-xl md:text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Nombre completo" />
 					</div>
 					<div>
-						<label className=" block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" for="name">Teléfono</label>
+						<label className=" block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" htmlFor="name">Teléfono</label>
 						<input  name='phone' className=" text-xl md:text-2xl w-full p-2 c-input rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="name" type="text" placeholder="Teléfono Valido" />
 					</div>
 					<div>
-						<label className="block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" for="message">Dirección</label>
+						<label className="block text-2xl md:text-3xl font-medium mb-2 text-dark mb-2" htmlFor="message">Dirección</label>
 						<textarea name='address'className="text-xl md:text-2xl c-input w-full p-2 rounded  text-dark border border-black focus:outline-none focus:border-stone-500 placeholder-gray-700" required id="message" rows="4" placeholder="Dirección completa "></textarea>
 					</div>
 					<input type="hidden" id="product_details" name="product_details"/>
