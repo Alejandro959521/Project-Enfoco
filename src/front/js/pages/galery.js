@@ -40,7 +40,7 @@ export const Galery = () => {
 	  
 	}, [])
        
-	//console.log("array en 6 ", items); 
+	console.log("array en 6 galery ", items); 
 
 	const nextPage = () => {
 
