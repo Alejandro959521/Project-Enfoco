@@ -10,7 +10,7 @@ import os
 
 
 
-api = Blueprint('api', __name__, static_folder='front')
+api = Blueprint('api', __name__, static_folder='public')
 
 # Allow CORS requests to this API
 CORS(api)
