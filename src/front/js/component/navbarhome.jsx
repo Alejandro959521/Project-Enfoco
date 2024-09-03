@@ -11,7 +11,7 @@ import logo2 from "../../img/logo3.png";
 
 export const Navbarhome = () => {
 
-	const { store, actions } = useContext(Context);
+	const { store, actions } =  useContext(Context);
 	const [isCatalogOpen, setIsCatalogOpen] = useState(false);
 	
 	const handleCatalogClick = () => {
