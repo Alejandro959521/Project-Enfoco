@@ -47,11 +47,11 @@ module.exports = {
         template: 'template.html'
     }),
     new Dotenv({ safe: true, systemvars: true }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/front/img2', to: 'public' }, // Copia imágenes desde `src/front/img` a `public/img`
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: 'src/front/img2', to: 'public' }, // Copia imágenes desde `src/front/img` a `public/img`
+    //   ],
+    // }),
 
   ]
 };
