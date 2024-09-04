@@ -42,7 +42,7 @@ class Elements(db.Model):
             'price': self.price,
             'category': self.category,
             'description': self.description,
-            'image': f"front/img2/{os.path.basename(self.image)}"  
+            'image': f"public/img/{os.path.basename(self.image)}"  
     }
 
     def serialize(self): 
