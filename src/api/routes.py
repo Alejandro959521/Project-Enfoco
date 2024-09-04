@@ -8,9 +8,14 @@ from flask_cors import CORS
 import base64
 import os
 
-  
-app = Flask(__name__, static_folder='front')
-api = Blueprint('api', __name__, static_folder='public')
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Crea el Blueprint con la carpeta static correcta
+api = Blueprint('api', __name__, static_folder=os.path.join(project_root, 'public'), static_url_path='/')
+
+
+# api = Blueprint('api', __name__, static_folder='public')
+
 
 # Allow CORS requests to this API
 CORS(api)
