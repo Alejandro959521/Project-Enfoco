@@ -18,7 +18,7 @@ api = Blueprint('api', __name__, static_folder=os.path.join(project_root, 'publi
 
 
 # Allow CORS requests to this API
-CORS(api)
+CORS(api)  
 
 
 @api.route('/hello', methods=['POST', 'GET'])
