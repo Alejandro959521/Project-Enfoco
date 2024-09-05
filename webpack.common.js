@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -47,11 +46,7 @@ module.exports = {
         template: 'template.html'
     }),
     new Dotenv({ safe: true, systemvars: true }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     { from: 'src/front/img2', to: 'public' }, // Copia imágenes desde `src/front/img` a `public/img`
-    //   ],
-    // }),
+    
 
   ]
 };

@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
 import os
+
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -42,7 +43,7 @@ class Elements(db.Model):
             'price': self.price,
             'category': self.category,
             'description': self.description,
-            'image': f"{os.path.basename(self.image)}"  
+            'image': f"front/img2/{os.path.basename(self.image)}"  
     }
 
     def serialize(self): 
