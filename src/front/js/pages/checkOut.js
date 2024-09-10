@@ -87,7 +87,7 @@ export const CheckOut = () => {
 						))
 					}
 
-					<div className="border-t-2 text-white px-4 py-2 flex justify-around text-2xl md:text-3xl font-bold mt-auto ">
+					<div className="border-t-2 text-white px-4 py-2 flex  justify-around text-2xl md:text-3xl font-bold mt-auto ">
 						<p className="">Total  :</p>
 						<p className="">{store.sum} $</p>
 					</div>

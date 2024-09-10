@@ -15,11 +15,11 @@ export const Galery = () => {
 
 	const items_per_page = 6
 
-	const [items, setItems] =  useState([])
+	const [items, setItems] = useState([])
 	
 	const initialPage = parseInt(localStorage.getItem('currentPageG')) || 0;
 
-	const [currentPageG, setCurrentPageG] = useState(initialPage);
+	const [currentPageG,setCurrentPageG] = useState(initialPage);
 
 	const updateItems = () => {
 		let valor = store.data;

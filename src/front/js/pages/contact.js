@@ -54,7 +54,7 @@ export const Contact = () => {
 			</div> 
 
 
-			<div className="flex flex-wrap justify-around gap-8 py-8" style={{ backgroundColor: `#000000` }}>
+			<div className="flex flex-wrap  justify-around gap-8 py-8" style={{ backgroundColor: `#000000` }}>
 				
 				<form onSubmit={handleSubmit} ref={refForm} className="flex-1 space-y-6 m-2 pl-8">
 					<div>
