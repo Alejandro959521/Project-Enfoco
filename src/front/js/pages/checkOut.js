@@ -75,7 +75,7 @@ export const CheckOut = () => {
 							<div key={index} className=" flex  items-center text-white justify-around px-6 py-2 ">
 								<div className=" flex md:gap-x-16 text-white items-center gap-2">
 									<figure className="w-32 h-32 md:w-64 md:h-64">
-										<img className="w-full h-full rounded-lg object-contain" src={process.env.BACKEND_URL + item.image} />
+										<img className="w-full h-full rounded-lg object-contain" src={item.image} />
 									</figure>
 									<p className="text-2xl md:text-3xl font-medium  text-white">{item.title}</p>
 									<p className="flex text-2xl md:text-3xl font-semibold  text-white"> {item.price}&nbsp;$</p>

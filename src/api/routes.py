@@ -29,9 +29,9 @@ def handle_hello():
 
 @api.route('/elements', methods=['POST'])
 def add_element():
-    data = request.json  # Obtenemos los datos JSON de la solicitud
+    data = request.json 
 
-    # Validar que los campos requeridos estén presentes en el JSON
+    
     if not all(k in data for k in ('title', 'price', 'category', 'description', 'image')):
         return jsonify({"error": "Faltan datos en el JSON"}), 400
 
@@ -39,30 +39,22 @@ def add_element():
     price = data['price']
     category = data['category']
     description = data['description']
-    image_data = data['image']
+    image_url = data['image']
 
-    # Decodificar la imagen de base64 y guardarla en el servidor
-
-    image_filename = f"{title.replace(' ', '_')}.jpg"
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    image_filepath = os.path.join(current_dir,'..','front','img2', image_filename)
-    with open(image_filepath, 'wb') as image_file:
-        image_file.write(base64.b64decode(image_data))
-
-    # Comprobar si el título ya existe
+   
     if Elements.query.filter_by(title=title).first():
         return jsonify({"error": "El título ya existe"}), 409
 
-    # Crear un nuevo elemento 
+    
     new_element = Elements(
         title=title,
         price=price,
         category=category,
         description=description,
-        image=image_filepath
+        image=image_url
     )
 
-    # Añadir el nuevo elemento a la base de datos
+    
     try:
         db.session.add(new_element)
         db.session.commit()
@@ -99,9 +91,9 @@ def get_pictures_by_category(category_name):
     if not pictures:
         return jsonify({
             "message": "No pictures found in this category"
-        }), 404  # 404 Not Found si no se encuentran elementos
+        }), 404  
 
-    # Construir una lista de los elementos encontrados
+   
     result = [element.to_dict() for element in pictures]
 
     return jsonify(result), 200 

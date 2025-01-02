@@ -47,7 +47,7 @@ export const Carrito = () => {
                                                         <div key={index} className=" flex items-center justify-between mb-4">
                                                                 <div className="flex items-center gap-4">
                                                                         <figure className="w-16 h-16">
-                                                                                <img className="w-full h-full rounded-lg object-cover border border-gray-600" src={process.env.BACKEND_URL + item.image} />
+                                                                                <img className="w-full h-full rounded-lg object-cover border border-gray-600" src={item.image} />
                                                                         </figure>
                                                                         <p className="text-xl font-medium">{item.title}</p>
                                                                 </div>

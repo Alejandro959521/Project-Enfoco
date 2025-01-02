@@ -18,7 +18,6 @@ export const ImageRandom = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => {
-                // Generar un índice aleatorio diferente al índice actual
                 let newIndex;
                 do {
                     newIndex = Math.floor(Math.random() * listImage.length);
@@ -28,7 +27,6 @@ export const ImageRandom = () => {
             });
         }, 4000);
 
-        // Limpiar el intervalo cuando el componente se desmonta
         return () => clearInterval(intervalId);
 
     }, [listImage, 4000]);

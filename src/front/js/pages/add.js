@@ -22,21 +22,7 @@ export const Add = () => {
   };
 
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      setFormData({
-        ...formData,
-        image: reader.result.split(',')[1]  // Solo obtenemos la parte base64
-      });
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
-  };
+ 
 
 
   const handleSubmit = async (e) => {
@@ -119,11 +105,11 @@ export const Add = () => {
         </div>
         <div>
           <label className="block text-gray-700 font-bold mb-2">Imagen:</label>
-          <input
-            type="file"
+          <input     
+           type="text"     
             name="image"
-            accept="image/*"
-            onChange={handleImageChange}
+            value={formData.image}
+            onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />

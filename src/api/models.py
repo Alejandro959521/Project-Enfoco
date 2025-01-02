@@ -31,7 +31,7 @@ class Elements(db.Model):
     price = db.Column(db.String(80), unique=False, nullable=False)
     category = db.Column(db.String(120), unique=False, nullable=False)
     description = db.Column(db.String(500), unique=False, nullable=False)
-    image = db.Column(db.Text, nullable=False) 
+    image = db.Column(db.String(2083), nullable=False) 
 
     def __repr__(self):  
         return f'<Elements {self.title}>'
@@ -43,7 +43,7 @@ class Elements(db.Model):
             'price': self.price,
             'category': self.category,
             'description': self.description,
-            'image': f"front/img2/{os.path.basename(self.image)}"  
+            'image': self.image 
     }
 
     def serialize(self): 
@@ -53,6 +53,6 @@ class Elements(db.Model):
             "price": self.price,
             "category": self.category,
             "description": self.description,
-            "image": self.description 
+           "image": self.image
             # do not serialize the password, its a security breach
         }    

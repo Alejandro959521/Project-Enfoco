@@ -23,7 +23,7 @@ export const CardDelete = ({data, onItemDeleted }) => {
 
 				<div className="flex flex-col rounded-card h-[500px] bg-white">
 					<div className=" overflow-hidden rounded-card ">
-						<img className="w-full h-full" src={process.env.BACKEND_URL + data.image} /> 
+						<img className="w-full h-full" src={data.image} /> 
 					</div>   
  
 					<p className="text-3xl my-1 text-center">{data.title}</p>

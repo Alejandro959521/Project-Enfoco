@@ -35,15 +35,15 @@ const Layout = () => {
                         <Route element={<Home/>} path="/" />
                         <Route element={<Galery/>} path="/Galeria"/>
                         <Route element={<AboutMe/>} path="/SobreMi"/>
-                        <Route element={<Services/>} path="/Servicios"/>
+                        <Route element={<Services/>} path="/Servicios"/>   
                         <Route element={<Contact/>} path="/Contacto"/>
                         <Route element={<GaleryDetalle/>} path="/Detalle/:Id"/>
                         <Route element={<CheckOut/>} path="/CheckOut"/>
-                        <Route element={<Add/>} path="/Add"/>
+                        <Route element={<Add/>} path="/Add"/> 
                         <Route element={<DeleteItem/>} path="/delete"/>
                         <Route element={< WildLife/>} path="/Fauna"/>
                         <Route element={<UrbanLife/>} path="/VidaUrbana"/>
-                        <Route element={< LandScape/>} path="/Paisajes"/>
+                        <Route element={< LandScape/>} path="/Paisajes"/>  
 
 
                         <Route element={<h1>Not found!</h1>} />
