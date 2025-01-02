@@ -3,29 +3,29 @@ import { Link } from "react-router-dom";
 import "../../styles/service.css";
 import { Context } from "../store/appContext.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus, faChevronDown, faChevronUp  } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import logo from "../../img/logonegro.png";
 
 
 
 export const NavbarService = () => {
-  
+
 	const { store, actions } = useContext(Context);
 	const [isCatalogOpen, setIsCatalogOpen] = useState(false);
-	
+
 	const handleCatalogClick = () => {
-		setIsCatalogOpen(!isCatalogOpen); 
-	  };
+		setIsCatalogOpen(!isCatalogOpen);
+	};
 
 	const handleCategoryClick = (category) => {
 		actions.navOpt(category);
-		setIsCatalogOpen(false); 
+		setIsCatalogOpen(false);
 		actions.navOpt("Catalogo");
-	  };
+	};
 
 	return (
 
-		<div className="flex items-center p-4 h-auto lg:h-20 flex-col lg:flex-row justify-between" style={{ backgroundColor: `#0D0909` }}>
+		<div className="flex items-center p-4 h-auto lg:h-20 flex-col lg:flex-row justify-between" style={{ backgroundColor: `#352D2D` }}>
 			<div className="    ml-4 ">
 				<Link to="/" onClick={() => actions.navOpt("Inicio")} className={`link hover:font-bold ${store.navbarSelect === "Inicio" ? "font-bold" : ""}`}>
 
@@ -43,16 +43,16 @@ export const NavbarService = () => {
 
 				<div
 					className="relative"
-					onClick={handleCatalogClick} 
+					onClick={handleCatalogClick}
 				>
-					<span  
-					
-					className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
+					<span
+
+						className={`link hover:font-bold transition-transform transform hover:scale-105 cursor-pointer ${store.navbarSelect === "Catalogo" ? "font-bold" : ""}`}>
 						Catálogo
-						<FontAwesomeIcon 
-             			icon={isCatalogOpen ? faChevronUp : faChevronDown} 
-              			className="ml-2 text-sm"
-            />
+						<FontAwesomeIcon
+							icon={isCatalogOpen ? faChevronUp : faChevronDown}
+							className="ml-2 text-sm"
+						/>
 					</span>
 					{isCatalogOpen && (
 						<div className="z-50 absolute left-0 mt-2 w-48 bg-black text-white border rounded shadow-lg">
@@ -60,7 +60,7 @@ export const NavbarService = () => {
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
 									onClick={() => handleCategoryClick("Catalogo")}
-									
+
 								>
 									<Link to="/Fauna">Fauna</Link>
 								</li>
@@ -72,7 +72,7 @@ export const NavbarService = () => {
 								</li>
 								<li
 									className="block px-4 py-2  hover:underline underline-offset-8 cursor-pointer"
-									onClick={() => handleCategoryClick("Catalogo")} 
+									onClick={() => handleCategoryClick("Catalogo")}
 								>
 									<Link to="/Paisajes">Paisajes</Link>
 								</li>
@@ -81,7 +81,7 @@ export const NavbarService = () => {
 					)}
 
 				</div>
-			
+
 
 
 				<Link to="/Servicios" onClick={() => actions.navOpt("Servicios")} className={`link hover:font-bold  transition-transform transform hover:scale-105 ${store.navbarSelect === "Servicios" ? "font-bold" : ""}`} >
