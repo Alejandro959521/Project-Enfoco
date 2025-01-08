@@ -37,8 +37,8 @@ export const Contact = () => {
 				<div className=" p-6 text-center max-w-xs">
 					<i className="fas fa-map-marker-alt text-4xl mb-4"></i>
 					<h3 className="text-2xl font-bold mb-2 ">DIRECCIÓN </h3>
-					<p className="text-lg">SoHo 94 Broadway St</p>
-					<p className="text-lg">Nueva York, NY 1001</p>
+					<p className="text-lg">Buenos Aires</p>
+					<p className="text-lg">Argentina</p>
 				</div>
 				<div className=" p-6 text-center max-w-xs">
 					<i className="fas fa-phone-alt text-4xl mb-4"></i>
@@ -49,7 +49,7 @@ export const Contact = () => {
 				<div className="d p-6 text-center  max-w-xs">
 					<i className="fas fa-envelope text-4xl mb-4"></i>
 					<h3 className="text-2xl font-bold mb-2">CORREO ELECTRÓNICO</h3>
-					<p className="text-lg">Angela@foto.com</p>
+					<p className="text-lg">enfococuadros@mail.com</p>
 				</div> 
 			</div> 
 

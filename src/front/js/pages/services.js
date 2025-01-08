@@ -6,6 +6,11 @@ import Service2 from "../../img/Servicio2.jpeg";
 import Service3 from "../../img/Servicio3.jpeg";
 import Service4 from "../../img/Servicio4.jpeg";
 import Service5 from "../../img/Servicio5.jpeg";
+import Service7 from "../../img/servicio 7.jpeg";
+import Service8 from "../../img/servicio8.jpeg";
+import Service9 from "../../img/servicio9.jpg";
+import Service10 from "../../img/servicio10.jpg";
+import Service11 from "../../img/servicio11.jpeg";
 
 import imageDetalle from "../../img/detalles.jpeg";
 import "../../styles/home.css";
@@ -33,7 +38,7 @@ export const Services = () => {
 					</div>  
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xs lg:max-w-xl md:max-w-sm md:max-h-72 md:px-8 rounded-lg " src={Service2} />
+						<img className="max-w-xs lg:max-w-xl md:max-w-sm md:max-h-72 md:px-8 rounded-lg " src={Service11} />
 					</div>
 
 
@@ -66,7 +71,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xs rounded-lg " src={Service7} />
 
 					</div>
 
@@ -86,7 +91,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xs rounded-lg " src={Service8} />
 
 					</div>
 
@@ -106,7 +111,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xs rounded-lg " src={Service9} />
 
 					</div>
 
@@ -128,7 +133,7 @@ export const Services = () => {
 					</div>
 
 					<div className="flex-1 flex justify-center  mt-4 md:mt-0">
-						<img className="max-w-xs rounded-lg " src={imageDetalle} />
+						<img className="max-w-xs rounded-lg " src={Service10} />
 
 					</div>
 
