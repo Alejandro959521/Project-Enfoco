@@ -220,7 +220,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						
 						const body = await respond.json(); 
 						setStore({ category_pictures: body }) 
-						console.log("flux category",body)
+						//console.log("flux category",body)
 						
 					}
 				

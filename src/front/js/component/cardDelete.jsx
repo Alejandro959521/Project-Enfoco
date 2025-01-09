@@ -11,7 +11,7 @@ export const CardDelete = ({data, onItemDeleted }) => {
   
 		await actions.deletePicture(picture_id)
 		onItemDeleted();   
-		console.log("desde card delete",store.data)
+		//console.log("desde card delete",store.data)
 		
    }
 
